@@ -90,7 +90,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2382884432722983192, guid: 5cefdee7e3567124484549b62dcb7080, type: 3}
       propertyPath: m_Name
-      value: StatBlock_Energy
+      value: StatBlock_Coins
       objectReference: {fileID: 0}
     - target: {fileID: 5158319565411007693, guid: 5cefdee7e3567124484549b62dcb7080, type: 3}
       propertyPath: m_Pivot.x

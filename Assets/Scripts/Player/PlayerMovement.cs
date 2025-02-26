@@ -7,11 +7,19 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+
+    [Header("Movement Settings")]
     [SerializeField] private float acceleration = 4000;
     [SerializeField] private float maxSpeed = 6.5f;
 
     private const string MOVEMENT_DIRECTION_ACTION = "Move";
     private Vector2 movementDirection;
+
+    [Header("Visuals")]
+    [SerializeField] private Transform playerVisualsTransform;
+    [SerializeField] private Animator playerAnimator;
+
+    private const string MOVEMENT_ANIMATION_BOOL = "moving";
 
     private void Awake()
     {
@@ -20,7 +28,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        rb.AddForce(acceleration * Time.deltaTime * movementDirection.normalized);        
+        HandleVisuals();
+
+        HandleMovement();
+    }
+
+    private void HandleVisuals()
+    {
+        //Sets moving animation
+        bool isMoving = movementDirection != Vector2.zero;
+        playerAnimator.SetBool(MOVEMENT_ANIMATION_BOOL, isMoving);
+        
+        //Flips player visuals towards movement direction
+        if (movementDirection.x != 0)
+            playerVisualsTransform.localScale = new Vector3(movementDirection.x > 0 ? 1 : -1, 1, 1);
+    }
+
+    private void HandleMovement()
+    {
+        rb.AddForce(acceleration * Time.deltaTime * movementDirection.normalized);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
 

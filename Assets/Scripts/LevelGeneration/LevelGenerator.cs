@@ -20,15 +20,12 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private float noiseScale = 1;
     [SerializeField] private bool randomizeSeed;
     [SerializeField] private int seed;
-    [SerializeField, Range(0, 1)] private float groundStep;
+    
+    [SerializeField] private float groundStepCurveRange = 15;
+    [SerializeField, Tooltip("Minimum value for placing ground and its changing by distance from (0, 0) position")]
+    private AnimationCurve groundStepByDistance;
 
     private System.Random randomizer;
-
-    private void Awake()
-    {
-        if (randomizeSeed)
-            seed = Random.Range(int.MinValue, int.MaxValue);
-    }
 
     private void Start()
     {        
@@ -38,6 +35,10 @@ public class LevelGenerator : MonoBehaviour
     [ContextMenu("Generate Level")]
     public void GenerateLevel()
     {
+        //Randomizes generation seed
+        if (randomizeSeed)
+            seed = Random.Range(int.MinValue, int.MaxValue);
+
         //Clears tilemap from previous tiles
         tilemap.ClearAllTiles();
 
@@ -51,8 +52,14 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int y = 0; y < mapSize.y; y++)
             {
+                //Calculates tile position and its distance from (0, 0)
+                Vector3Int tilePosition = new Vector3Int(x - halfSizeOffset.x, y - halfSizeOffset.y);
+                float distanceFromStart = Vector3Int.Distance(tilePosition, Vector3Int.zero);
+
+                //Gets groundStep value for this tile and sets it
+                float groundStep = groundStepByDistance.Evaluate(distanceFromStart / groundStepCurveRange);
                 if (noise[x, y] >= groundStep)
-                    tilemap.SetTile(new Vector3Int(x - halfSizeOffset.x, y - halfSizeOffset.y), landTile);
+                    tilemap.SetTile(tilePosition, landTile);
             }
         }
     }
