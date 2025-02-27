@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60cdc0fec09361a45928293a08800581
+guid: 94dc346c598a7c54dae284d0a694ba85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,11 +136,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass_TL
+      name: Sand_TL
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -157,11 +157,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_T
+      name: Sand_T
       rect:
         serializedVersion: 2
         x: 16
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -178,11 +178,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TR
+      name: Sand_TR
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -199,11 +199,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Vertical_T
+      name: Sand_Vertical_T
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -220,11 +220,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_TL
+      name: Sand_Contour_TL
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -241,11 +241,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_T_L
+      name: Sand_Contour_T_L
       rect:
         serializedVersion: 2
         x: 80
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -262,11 +262,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_T_R
+      name: Sand_Contour_T_R
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -283,11 +283,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_TR
+      name: Sand_Contour_TR
       rect:
         serializedVersion: 2
         x: 112
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -304,11 +304,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TShaped_T
+      name: Sand_TShaped_T
       rect:
         serializedVersion: 2
         x: 128
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -325,11 +325,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Sideways_DT
+      name: Sand_Sideways_DT
       rect:
         serializedVersion: 2
         x: 144
-        y: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -346,11 +346,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_L
+      name: Sand_L
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -367,11 +367,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Full_00
+      name: Sand_Full_00
       rect:
         serializedVersion: 2
         x: 16
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -388,11 +388,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_R
+      name: Sand_R
       rect:
         serializedVersion: 2
         x: 32
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -409,11 +409,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Vertical_00
+      name: Sand_Vertical_00
       rect:
         serializedVersion: 2
         x: 48
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -430,11 +430,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_L_T
+      name: Sand_Contour_L_T
       rect:
         serializedVersion: 2
         x: 64
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -451,11 +451,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_TL
+      name: Sand_Internal_TL
       rect:
         serializedVersion: 2
         x: 80
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -472,11 +472,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_TR
+      name: Sand_Internal_TR
       rect:
         serializedVersion: 2
         x: 96
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -493,11 +493,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_R_T
+      name: Sand_Contour_R_T
       rect:
         serializedVersion: 2
         x: 112
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -514,11 +514,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_T
+      name: Sand_Internal_T
       rect:
         serializedVersion: 2
         x: 128
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -535,11 +535,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Sideways_TD
+      name: Sand_Sideways_TD
       rect:
         serializedVersion: 2
         x: 144
-        y: 80
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -556,11 +556,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_DL
+      name: Sand_DL
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -577,11 +577,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_D
+      name: Sand_D
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -598,11 +598,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_DR
+      name: Sand_DR
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -619,11 +619,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Vertical_D
+      name: Sand_Vertical_D
       rect:
         serializedVersion: 2
         x: 48
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -640,11 +640,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_L_D
+      name: Sand_Contour_L_D
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -661,11 +661,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_DL
+      name: Sand_Internal_DL
       rect:
         serializedVersion: 2
         x: 80
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -682,11 +682,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_DR
+      name: Sand_Internal_DR
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -703,11 +703,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_R_D
+      name: Sand_Contour_R_D
       rect:
         serializedVersion: 2
         x: 112
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -724,11 +724,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_D
+      name: Sand_Internal_D
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -745,11 +745,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_3Way_TL
+      name: Sand_3Way_TL
       rect:
         serializedVersion: 2
         x: 144
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -766,11 +766,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_3Way_TR
+      name: Sand_3Way_TR
       rect:
         serializedVersion: 2
         x: 160
-        y: 64
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -787,11 +787,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Horizontal_L
+      name: Sand_Horizontal_L
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -808,11 +808,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Horizontal_00
+      name: Sand_Horizontal_00
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -829,11 +829,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Horizontal_R
+      name: Sand_Horizontal_R
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -850,11 +850,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Single
+      name: Sand_Single
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -871,11 +871,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_DL
+      name: Sand_Contour_DL
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -892,11 +892,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_D_L
+      name: Sand_Contour_D_L
       rect:
         serializedVersion: 2
         x: 80
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -913,11 +913,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_D_R
+      name: Sand_Contour_D_R
       rect:
         serializedVersion: 2
         x: 96
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -934,11 +934,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Contour_DR
+      name: Sand_Contour_DR
       rect:
         serializedVersion: 2
         x: 112
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -955,11 +955,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TShaped_D
+      name: Sand_TShaped_D
       rect:
         serializedVersion: 2
         x: 128
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -976,11 +976,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_3Way_DL
+      name: Sand_3Way_DL
       rect:
         serializedVersion: 2
         x: 144
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -997,11 +997,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_3Way_DR
+      name: Sand_3Way_DR
       rect:
         serializedVersion: 2
         x: 160
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1018,11 +1018,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TShaped_L
+      name: Sand_TShaped_L
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1039,11 +1039,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_L
+      name: Sand_Internal_L
       rect:
         serializedVersion: 2
         x: 80
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1060,11 +1060,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Internal_R
+      name: Sand_Internal_R
       rect:
         serializedVersion: 2
         x: 96
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1081,11 +1081,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_TShaped_R
+      name: Sand_TShaped_R
       rect:
         serializedVersion: 2
         x: 112
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1102,11 +1102,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Cross_00
+      name: Sand_Cross_00
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1123,11 +1123,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Cross_01
+      name: Sand_Cross_01
       rect:
         serializedVersion: 2
         x: 144
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1144,263 +1144,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Full_01
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f5f851f05959a24bbf606779912405b
-      internalID: 779587833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_02
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3599958837e45d3468f2fb8cb28dda14
-      internalID: -110078495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_03
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a05fb033fef16041aaf270e332e0735
-      internalID: 1904028471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_04
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d5b989d9856ece4d9c907b0ebe4c856
-      internalID: 1972195014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_05
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acdbc7fb48322654c90ae1c0b28676fc
-      internalID: 120461889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_06
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8909666de6a8f4046838f7478955c554
-      internalID: -1134853408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_07
+      name: Sand_Vertical_01
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69fb3965ced382e45842228f3e99e28f
-      internalID: 1241740640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_08
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 791d696dc67831e4c8c34e433936c337
-      internalID: -1525876808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_09
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c34e77ee477359e40a340a7483ff9881
-      internalID: -394701984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_10
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7b3f4b4bd269a2499d326dc4a681835
-      internalID: 1482083715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14f7b40c4fe88844a8da479f57531edd
-      internalID: -122284074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Full_12
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5315316a338a784a8dc17c9adf0ec92
-      internalID: -1523810635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_Vertical_01
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1417,11 +1165,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_Horizontal_01
+      name: Sand_Horizontal_01
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1448,10 +1196,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass_3Way_DL: 1148761078
-      Grass_3Way_DR: -1489859500
-      Grass_3Way_TL: 2088404658
-      Grass_3Way_TR: -340501117
       Grass_43: -1626737768
       Grass_44: -1946353013
       Grass_45: 215580414
@@ -1462,24 +1206,6 @@ TextureImporter:
       Grass_68: -38584079
       Grass_69: 1847481103
       Grass_70: -2074711492
-      Grass_Contour_DL: -1144788544
-      Grass_Contour_DR: -591556157
-      Grass_Contour_D_L: -481611395
-      Grass_Contour_D_R: 40008953
-      Grass_Contour_L_D: 379977472
-      Grass_Contour_L_T: -1405236254
-      Grass_Contour_R_D: -1328949558
-      Grass_Contour_R_T: -283317920
-      Grass_Contour_TL: 711714218
-      Grass_Contour_TR: 1847481103
-      Grass_Contour_T_L: -1095871568
-      Grass_Contour_T_R: 1124294224
-      Grass_Cross_00: -1714598663
-      Grass_Cross_01: -417417172
-      Grass_D: -2131884167
-      Grass_DL: 279346985
-      Grass_DR: -715127910
-      Grass_Full_00: 779587833
       Grass_Full_01: -110078495
       Grass_Full_02: 1904028471
       Grass_Full_03: 1972195014
@@ -1492,34 +1218,56 @@ TextureImporter:
       Grass_Full_10: -122284074
       Grass_Full_11: -1523810635
       Grass_Full_12: 238274114
-      Grass_Horizontal_00: 238274114
-      Grass_Horizontal_01: -2013501857
-      Grass_Horizontal_L: -4534312
-      Grass_Horizontal_R: 263151675
-      Grass_Internal_D: -1452642803
-      Grass_Internal_DL: -1284287207
-      Grass_Internal_DR: -548551938
-      Grass_Internal_L: -2069564473
-      Grass_Internal_R: 770733503
-      Grass_Internal_T: -1881390055
-      Grass_Internal_TL: 589900447
-      Grass_Internal_TR: -467520476
-      Grass_L: -431324900
-      Grass_R: 818303634
-      Grass_Sideways_DT: -1753882057
-      Grass_Sideways_TD: -452512550
-      Grass_Single: 261861958
-      Grass_T: 858906723
-      Grass_TL: -338246374
-      Grass_TR: 10280553
-      Grass_TShaped_D: 988315618
-      Grass_TShaped_L: -343396380
-      Grass_TShaped_R: 1943323339
-      Grass_TShaped_T: -2074711492
-      Grass_Vertical_00: 10280553
-      Grass_Vertical_01: -1441107295
-      Grass_Vertical_D: -1079604755
-      Grass_Vertical_T: -343396380
+      Sand_3Way_DL: 1148761078
+      Sand_3Way_DR: -1489859500
+      Sand_3Way_TL: 2088404658
+      Sand_3Way_TR: -340501117
+      Sand_Contour_DL: -1144788544
+      Sand_Contour_DR: -591556157
+      Sand_Contour_D_L: -481611395
+      Sand_Contour_D_R: 40008953
+      Sand_Contour_L_D: 379977472
+      Sand_Contour_L_T: -1405236254
+      Sand_Contour_R_D: -1328949558
+      Sand_Contour_R_T: -283317920
+      Sand_Contour_TL: 711714218
+      Sand_Contour_TR: 1847481103
+      Sand_Contour_T_L: -1095871568
+      Sand_Contour_T_R: 1124294224
+      Sand_Cross_00: -1714598663
+      Sand_Cross_01: -417417172
+      Sand_D: 1023158113
+      Sand_DL: -2131884167
+      Sand_DR: 279346985
+      Sand_Full_00: -715127910
+      Sand_Horizontal_00: 238274114
+      Sand_Horizontal_01: -2013501857
+      Sand_Horizontal_L: 19618574
+      Sand_Horizontal_R: -4534312
+      Sand_Internal_D: -1452642803
+      Sand_Internal_DL: 263151675
+      Sand_Internal_DR: -1284287207
+      Sand_Internal_L: -2069564473
+      Sand_Internal_R: 770733503
+      Sand_Internal_T: -1881390055
+      Sand_Internal_TL: -548551938
+      Sand_Internal_TR: 589900447
+      Sand_L: -467520476
+      Sand_R: -431324900
+      Sand_Sideways_DT: -1753882057
+      Sand_Sideways_TD: -452512550
+      Sand_Single: 261861958
+      Sand_T: 818303634
+      Sand_TL: 858906723
+      Sand_TR: -338246374
+      Sand_TShaped_D: 988315618
+      Sand_TShaped_L: -343396380
+      Sand_TShaped_R: 1943323339
+      Sand_TShaped_T: -2074711492
+      Sand_Vertical_00: 10280553
+      Sand_Vertical_01: -1441107295
+      Sand_Vertical_D: -823380705
+      Sand_Vertical_T: -1079604755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

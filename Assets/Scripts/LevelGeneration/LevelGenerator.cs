@@ -13,8 +13,10 @@ public class LevelGenerator : MonoBehaviour
     private Vector2Int halfSizeOffset;
 
     [Header("Visuals")]
-    [SerializeField] private Tilemap tilemap;
-    [SerializeField] private RuleTile landTile;
+    [SerializeField] private Tilemap groundTilemap;
+    [SerializeField] private RuleTile sandTile;
+    [SerializeField] private RuleTile grassTile;
+    [SerializeField] private Transform waterTransform;
 
     [Header("Randomness")]
     [SerializeField] private float noiseScale = 1;
@@ -24,6 +26,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private float groundStepCurveRange = 15;
     [SerializeField, Tooltip("Minimum value for placing ground and its changing by distance from (0, 0) position")]
     private AnimationCurve groundStepByDistance;
+    [SerializeField, Tooltip("Value detemining if a grass or sand should be placed")]
+    private float grassStep = 0.1f;
 
     private System.Random randomizer;
 
@@ -35,17 +39,24 @@ public class LevelGenerator : MonoBehaviour
     [ContextMenu("Generate Level")]
     public void GenerateLevel()
     {
+        halfSizeOffset = mapSize / 2;
+
         //Randomizes generation seed
         if (randomizeSeed)
             seed = Random.Range(int.MinValue, int.MaxValue);
 
         //Clears tilemap from previous tiles
-        tilemap.ClearAllTiles();
+        groundTilemap.ClearAllTiles();
 
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
 
-        halfSizeOffset = mapSize / 2;
+        //Generates rough shape of a map (water, grass, sand)
+        GenerateMap();
+    }
+
+    private void GenerateMap()
+    {
         float[,] noise = GetPerlinNoise(mapSize.x, mapSize.y, noiseScale);
 
         for (int x = 0; x < mapSize.x; x++)
@@ -58,8 +69,17 @@ public class LevelGenerator : MonoBehaviour
 
                 //Gets groundStep value for this tile and sets it
                 float groundStep = groundStepByDistance.Evaluate(distanceFromStart / groundStepCurveRange);
-                if (noise[x, y] >= groundStep)
-                    tilemap.SetTile(tilePosition, landTile);
+
+                float tileNoise = noise[x, y];
+                if (tileNoise < groundStep)
+                    continue;
+
+                //Sets sand tile
+                groundTilemap.SetTile(new Vector3Int(tilePosition.x, tilePosition.y, -1), sandTile);
+
+                //Sets grass tile
+                if (tileNoise - groundStep >= grassStep)
+                    groundTilemap.SetTile(tilePosition, grassTile);
             }
         }
     }
