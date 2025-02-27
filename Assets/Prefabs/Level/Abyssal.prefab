@@ -301,6 +301,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   abyssalAnimation: {fileID: 974957513862321842}
-  maxDistanceFromCenter: 120
+  maxDistanceFromCenter: 105
   lurkingTime: 5
   attackCooldown: 0
