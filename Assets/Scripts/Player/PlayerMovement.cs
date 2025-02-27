@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    private bool canMove = true;
+    public void ToggleMovement(bool toggle) => canMove = toggle;
+
     [Header("Movement Settings")]
     [SerializeField] private float acceleration = 4000;
     [SerializeField] private float maxSpeed = 6.5f;
@@ -26,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        PlayerEntity.Instance.OnRespawn += () => ToggleMovement(true);
+    }
+
     private void Update()
     {
         HandleVisuals();
@@ -36,16 +44,22 @@ public class PlayerMovement : MonoBehaviour
     private void HandleVisuals()
     {
         //Sets moving animation
-        bool isMoving = movementDirection != Vector2.zero;
+        bool isMoving = canMove && movementDirection != Vector2.zero;
         playerAnimator.SetBool(MOVEMENT_ANIMATION_BOOL, isMoving);
-        
+
+        if (!canMove)
+            return;
+
         //Flips player visuals towards movement direction
-        if (movementDirection.x != 0)
+        if ( movementDirection.x != 0)
             playerVisualsTransform.localScale = new Vector3(movementDirection.x > 0 ? 1 : -1, 1, 1);
     }
 
     private void HandleMovement()
     {
+        if (!canMove)
+            return;
+
         rb.AddForce(acceleration * Time.deltaTime * movementDirection.normalized);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }

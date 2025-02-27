@@ -12,6 +12,23 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Vector2Int mapSize;
     private Vector2Int halfSizeOffset;
 
+    private bool[,] groundMask;
+
+    /// <summary>
+    /// Checks if this world position is on a solid ground
+    /// </summary>
+    public bool IsGround(Vector2 position)
+    {
+        if (groundMask == null)
+            return false;
+
+        Vector2Int roundedPosition = Vector2Int.RoundToInt(position) + halfSizeOffset;
+        if (roundedPosition.x < 0 || roundedPosition.x >= groundMask.GetLength(0) || roundedPosition.y < 0 || roundedPosition.y >= groundMask.GetLength(1))
+            return false;
+
+        return groundMask[roundedPosition.x, roundedPosition.y];
+    }
+
     [Header("Visuals")]
     [SerializeField] private Tilemap groundTilemap;
     [SerializeField] private RuleTile sandTile;
@@ -50,13 +67,19 @@ public class LevelGenerator : MonoBehaviour
 
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
-
-        //Generates rough shape of a map (water, grass, sand)
+        
         GenerateMap();
     }
 
+    /// <summary>
+    /// Generates rough shape of a map (grass, sand)
+    /// </summary>
     private void GenerateMap()
     {
+        //Makes a 2d bool determining what is ground
+        groundMask = new bool[mapSize.x, mapSize.y];
+
+        //Creates map noise
         float[,] noise = GetPerlinNoise(mapSize.x, mapSize.y, noiseScale);
 
         for (int x = 0; x < mapSize.x; x++)
@@ -71,7 +94,10 @@ public class LevelGenerator : MonoBehaviour
                 float groundStep = groundStepByDistance.Evaluate(distanceFromStart / groundStepCurveRange);
 
                 float tileNoise = noise[x, y];
-                if (tileNoise < groundStep)
+                bool containsGround = tileNoise >= groundStep;
+                groundMask[x, y] = containsGround;
+
+                if (!containsGround)
                     continue;
 
                 //Sets sand tile
