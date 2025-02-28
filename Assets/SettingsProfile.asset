@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: bee39ff89d9ea334196eefd9c604dde3, type: 2}
   defaultMasterVolume: 0.5
-  defaultMusicVolume: 0.35
+  defaultMusicVolume: 0.25
   defaultSFXVolume: 0.75

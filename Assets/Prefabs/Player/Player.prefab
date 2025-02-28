@@ -566,7 +566,8 @@ MonoBehaviour:
   footstepsSounds:
   - {fileID: 8300000, guid: cb2cf31eab1218d40bcbd0668caed4ad, type: 3}
   - {fileID: 8300000, guid: 33013c2522809a74a8c7bd3a29da9fe8, type: 3}
-  waterFootstepsSounds: []
+  waterFootstepsSounds:
+  - {fileID: 8300000, guid: be54c4924780b804982dc9422bf45eff, type: 3}
 --- !u!1001 &21053654797855184
 PrefabInstance:
   m_ObjectHideFlags: 0

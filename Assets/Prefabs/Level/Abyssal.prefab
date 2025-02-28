@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 445554107422216759}
   - component: {fileID: 1877482755028299857}
   - component: {fileID: 974957513862321842}
+  - component: {fileID: 327118370430922705}
   m_Layer: 0
   m_Name: Abyssal
   m_TagString: Untagged
@@ -216,6 +217,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &327118370430922705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407155295021318206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2b11b6928b1884da0f81f3895e43a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ea54498b5af278d4797080bae3cf7e2b, type: 3}
+  - {fileID: 8300000, guid: 0f4671e1c9d465542a0f5d688a5f944a, type: 3}
 --- !u!1 &5678987024282640154
 GameObject:
   m_ObjectHideFlags: 0
