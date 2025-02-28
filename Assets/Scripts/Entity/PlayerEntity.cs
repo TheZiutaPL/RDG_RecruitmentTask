@@ -7,7 +7,6 @@ public class PlayerEntity : Entity
 {
     public static PlayerEntity Instance { get; private set; }
 
-    [SerializeField] private Transform spawnPoint;
     public Action OnRespawn;
 
     private void Awake()
@@ -24,7 +23,7 @@ public class PlayerEntity : Entity
     {
         SetHealthToMax();
 
-        transform.position = spawnPoint.position;
+        transform.position = Vector2.zero;
 
         OnRespawn?.Invoke();
     }

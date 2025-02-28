@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerDieByAnimation : MonoBehaviour
+public class PlayerDieAnimationTrigger : MonoBehaviour
 {
     public void PlayerDie()
     {

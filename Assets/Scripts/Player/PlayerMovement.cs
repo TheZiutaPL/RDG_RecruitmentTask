@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Water Movement")]
     [SerializeField] private float waterMovementSpeedMultiplier = .75f;
-    private bool isInWater;
+    public bool IsInWater { get; private set; }
 
     [Header("Visuals")]
     [SerializeField] private Transform playerVisualsTransform;
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        isInWater = !LevelGenerator.IsGround(transform.position);
+        IsInWater = !LevelGenerator.IsGround(transform.position);
 
         HandleVisuals();
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetBool(MOVEMENT_ANIMATION_BOOL, isMoving);
 
         //Plays water particles while on water
-        emitParticles.enabled = isInWater && isMoving;
+        emitParticles.enabled = IsInWater && isMoving;
 
         if (!canMove)
             return;
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(acceleration * Time.deltaTime * movementDirection.normalized);
 
         //Float clamps max speed to correct value
-        float finalSpeed = isInWater ? maxSpeed * waterMovementSpeedMultiplier : maxSpeed;
+        float finalSpeed = IsInWater ? maxSpeed * waterMovementSpeedMultiplier : maxSpeed;
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, finalSpeed);
     }
 

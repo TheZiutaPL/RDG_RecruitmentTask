@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementByAnimation : MonoBehaviour
+public class PlayerMovementAnimationTrigger : MonoBehaviour
 {
     private PlayerMovement playerMovement;
 
