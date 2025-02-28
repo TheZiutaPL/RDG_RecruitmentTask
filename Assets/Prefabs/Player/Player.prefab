@@ -245,8 +245,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 4000
   maxSpeed: 6.5
+  waterMovementSpeedMultiplier: 0.6
   playerVisualsTransform: {fileID: 4199101919865080911}
   playerAnimator: {fileID: 1898467544197119184}
+  waterMovementParticles: {fileID: 986358328054493845}
 --- !u!50 &7926027194775889483
 Rigidbody2D:
   serializedVersion: 4
@@ -512,6 +514,7 @@ Transform:
   - {fileID: 3768161006999543970}
   - {fileID: 1095903239862583572}
   - {fileID: 5237434446060779830}
+  - {fileID: 8134856719871717063}
   m_Father: {fileID: 1170342227208070149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1898467544197119184
@@ -547,3 +550,70 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!1001 &21053654797855184
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4199101919865080911}
+    m_Modifications:
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652129587309545840, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+      propertyPath: m_Name
+      value: WaterParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+--- !u!198 &986358328054493845 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1007385213247724357, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+  m_PrefabInstance: {fileID: 21053654797855184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8134856719871717063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8119459312634693399, guid: a0517d1248ff05d48a26b683ae5dec73, type: 3}
+  m_PrefabInstance: {fileID: 21053654797855184}
+  m_PrefabAsset: {fileID: 0}

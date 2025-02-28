@@ -18,15 +18,23 @@ public class PlayerMovement : MonoBehaviour
     private const string MOVEMENT_DIRECTION_ACTION = "Move";
     private Vector2 movementDirection;
 
+    [Header("Water Movement")]
+    [SerializeField] private float waterMovementSpeedMultiplier = .75f;
+    private bool isInWater;
+
     [Header("Visuals")]
     [SerializeField] private Transform playerVisualsTransform;
     [SerializeField] private Animator playerAnimator;
+    [SerializeField] private ParticleSystem waterMovementParticles;
+    private ParticleSystem.EmissionModule emitParticles;
 
     private const string MOVEMENT_ANIMATION_BOOL = "moving";
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        emitParticles = waterMovementParticles.emission;
     }
 
     private void Start()
@@ -36,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        isInWater = !LevelGenerator.IsGround(transform.position);
+
         HandleVisuals();
 
         HandleMovement();
@@ -47,11 +57,14 @@ public class PlayerMovement : MonoBehaviour
         bool isMoving = canMove && movementDirection != Vector2.zero;
         playerAnimator.SetBool(MOVEMENT_ANIMATION_BOOL, isMoving);
 
+        //Plays water particles while on water
+        emitParticles.enabled = isInWater && isMoving;
+
         if (!canMove)
             return;
 
         //Flips player visuals towards movement direction
-        if ( movementDirection.x != 0)
+        if (movementDirection.x != 0)
             playerVisualsTransform.localScale = new Vector3(movementDirection.x > 0 ? 1 : -1, 1, 1);
     }
 
@@ -61,7 +74,10 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         rb.AddForce(acceleration * Time.deltaTime * movementDirection.normalized);
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+
+        //Float clamps max speed to correct value
+        float finalSpeed = isInWater ? maxSpeed * waterMovementSpeedMultiplier : maxSpeed;
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, finalSpeed);
     }
 
     #region Handling Input Events

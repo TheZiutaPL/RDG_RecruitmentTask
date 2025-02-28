@@ -10,14 +10,14 @@ public class LevelGenerator : MonoBehaviour
     private const int NOISE_ORIGIN_MAX = short.MaxValue * 4;
 
     [SerializeField] private Vector2Int mapSize;
-    private Vector2Int halfSizeOffset;
+    private static Vector2Int halfSizeOffset;
 
-    private bool[,] groundMask;
+    private static bool[,] groundMask;
 
     /// <summary>
     /// Checks if this world position is on a solid ground
     /// </summary>
-    public bool IsGround(Vector2 position)
+    public static bool IsGround(Vector2 position)
     {
         if (groundMask == null)
             return false;
