@@ -33,18 +33,32 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Tilemap groundTilemap;
     [SerializeField] private RuleTile sandTile;
     [SerializeField] private RuleTile grassTile;
-    [SerializeField] private Transform waterTransform;
+    [Space(5)]
+    [SerializeField] private Tilemap clutterTilemap;
+    [SerializeField] private Tilemap obstacleTilemap;
+    [SerializeField] private RuleTile groundClutterTile;
+    [SerializeField] private RuleTile groundObstacleTile;
+    [SerializeField] private RuleTile waterClutterTile;
+    [SerializeField] private RuleTile waterObstacleTile;
 
     [Header("Randomness")]
-    [SerializeField] private float noiseScale = 1;
     [SerializeField] private bool randomizeSeed;
     [SerializeField] private int seed;
-    
+
+    [Header("Island Generation")]
+    [SerializeField] private float islandNoiseScale = 6;
     [SerializeField] private float groundStepCurveRange = 15;
     [SerializeField, Tooltip("Minimum value for placing ground and its changing by distance from (0, 0) position")]
     private AnimationCurve groundStepByDistance;
-    [SerializeField, Tooltip("Value detemining if a grass or sand should be placed")]
-    private float grassStep = 0.1f;
+    [SerializeField, Tooltip("Value added to the groundStep to place grass instead of sand")]
+    private float grassAdditionalStep = 0.125f;
+
+    [Header("Extras Generation")]
+    [SerializeField] private float obstacleNoiseScale = 10;
+    [SerializeField, Range(0, 1)] private float groundExtrasStep = .6f;
+    [SerializeField, Range(0, 1)] private float waterExtrasStep = .8f;
+    [SerializeField, Range(0, 1)] private float clutterToObstacleRatio = .5f;
+    [SerializeField] private float spawnProtectionRange = 7.5f;
 
     private System.Random randomizer;
 
@@ -62,13 +76,17 @@ public class LevelGenerator : MonoBehaviour
         if (randomizeSeed)
             seed = Random.Range(int.MinValue, int.MaxValue);
 
-        //Clears tilemap from previous tiles
+        //Clears tilemaps from previous tiles
         groundTilemap.ClearAllTiles();
+        clutterTilemap.ClearAllTiles();
+        obstacleTilemap.ClearAllTiles();
 
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
         
         GenerateMap();
+
+        GenerateClutterAndObstacles();
     }
 
     /// <summary>
@@ -80,7 +98,7 @@ public class LevelGenerator : MonoBehaviour
         groundMask = new bool[mapSize.x, mapSize.y];
 
         //Creates map noise
-        float[,] noise = GetPerlinNoise(mapSize.x, mapSize.y, noiseScale);
+        float[,] noise = GetPerlinNoise(mapSize.x, mapSize.y, islandNoiseScale);
 
         for (int x = 0; x < mapSize.x; x++)
         {
@@ -104,8 +122,36 @@ public class LevelGenerator : MonoBehaviour
                 groundTilemap.SetTile(new Vector3Int(tilePosition.x, tilePosition.y, -1), sandTile);
 
                 //Sets grass tile
-                if (tileNoise - groundStep >= grassStep)
+                if (tileNoise - groundStep >= grassAdditionalStep)
                     groundTilemap.SetTile(tilePosition, grassTile);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Generates obstacles on map
+    /// </summary>
+    private void GenerateClutterAndObstacles()
+    {
+        float[,] noise = GetPerlinNoise(mapSize.x, mapSize.y, obstacleNoiseScale);
+
+        for (int x = 0; x < mapSize.x; x++)
+        {
+            for (int y = 0; y < mapSize.y; y++)
+            {
+                Vector3Int tilePosition = new Vector3Int(x - halfSizeOffset.x, y - halfSizeOffset.y);
+                float distanceFromStart = Vector3Int.Distance(tilePosition, Vector3Int.zero);
+
+                bool isOnGround = groundMask[x, y];
+                if (noise[x, y] >= (isOnGround ? groundExtrasStep : waterExtrasStep))
+                {
+                    //Decides if clutter or obstacle is placed
+                    double rand = randomizer.NextDouble();
+                    if(rand < clutterToObstacleRatio || distanceFromStart < spawnProtectionRange)
+                        clutterTilemap.SetTile(tilePosition, isOnGround ? groundClutterTile : waterClutterTile);
+                    else
+                        obstacleTilemap.SetTile(tilePosition, isOnGround ? groundObstacleTile : waterObstacleTile);
+                }
             }
         }
     }
