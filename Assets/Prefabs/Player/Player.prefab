@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 4000
   maxSpeed: 6.5
-  waterMovementSpeedMultiplier: 0.6
+  waterMovementSpeedMultiplier: 0.45
   playerVisualsTransform: {fileID: 4199101919865080911}
   playerAnimator: {fileID: 1898467544197119184}
   waterMovementParticles: {fileID: 986358328054493845}
