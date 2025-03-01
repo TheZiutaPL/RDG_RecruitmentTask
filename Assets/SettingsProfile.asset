@@ -16,3 +16,7 @@ MonoBehaviour:
   defaultMasterVolume: 0.1
   defaultMusicVolume: 0.25
   defaultSFXVolume: 0.75
+  fonts:
+  - {fileID: 11400000, guid: 4e6459d8e7ed3c64caa36a0cacddb83d, type: 2}
+  - {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  defaultFont: 0

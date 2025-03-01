@@ -109,6 +109,8 @@ public class SettingsProfile : ScriptableObject
     public void SetFont(int fontIndex)
     {
         PlayerPrefs.SetInt(FONT_KEY, fontIndex);
+
+        OnFontChanged?.Invoke();
     }
     #endregion
 }
