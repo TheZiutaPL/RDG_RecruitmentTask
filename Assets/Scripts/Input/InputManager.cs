@@ -1,36 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerInput))]
 public class InputManager : MonoBehaviour
 {
-    private static InputManager instance;
-    public static bool IsNull() => instance == null;
-
-    public static PlayerInput PlayerInput { get; private set; }
+    public static GameInputs GameInputs { get; private set; }
 
     private void Awake()
     {
-        if (IsNull())
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
-
-        PlayerInput = GetComponent<PlayerInput>();
+        GameInputs = new GameInputs();
     }
 
-    public static InputAction GetInputAction(string nameOrId) => PlayerInput.actions.FindAction(nameOrId);
-
-    public static void ToggleInput(bool toggle)
+    private void OnEnable()
     {
-        if (IsNull())
-            return;
+        GameInputs.Enable();
+    }
 
-        instance.gameObject.SetActive(toggle);
+    private void OnDisable()
+    {
+        GameInputs.Disable();
     }
 }

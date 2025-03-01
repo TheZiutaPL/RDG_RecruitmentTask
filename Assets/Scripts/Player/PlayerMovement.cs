@@ -85,21 +85,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        if (InputManager.IsNull())
-        {
-            Debug.LogError("Couldn't subsribe to InputManager events. InputManager does not exist!");
-            return;
-        }
-
-        InputManager.GetInputAction(MOVEMENT_DIRECTION_ACTION).performed += GetMovementDirection;
+        InputManager.GameInputs.Game.Move.performed += GetMovementDirection;
     }
 
     private void OnDisable()
     {
-        if (InputManager.IsNull())
-            return;
-
-        InputManager.GetInputAction(MOVEMENT_DIRECTION_ACTION).performed -= GetMovementDirection;
+        InputManager.GameInputs.Game.Move.performed -= GetMovementDirection;
     }
     #endregion
 }

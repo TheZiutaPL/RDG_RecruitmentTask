@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using TMPro;
 
 [CreateAssetMenu(fileName = "New SettingsProfile", menuName = "Settings Profile")]
 public class SettingsProfile : ScriptableObject
@@ -27,6 +28,12 @@ public class SettingsProfile : ScriptableObject
     private const string SFX_VOLUME_KEY = "SFXVolume";
     [SerializeField] private float defaultSFXVolume = .5f;
     public Action<float> OnSFXVolumeChanged;
+
+    [Header("Fonts")]
+    [SerializeField] private TMP_FontAsset[] fonts = new TMP_FontAsset[0];
+    private const string FONT_KEY = "FontIndex";
+    [SerializeField] private int defaultFont;
+    public Action OnFontChanged;
 
     public void InitializeSettingsProfile()
     {
@@ -86,6 +93,22 @@ public class SettingsProfile : ScriptableObject
 
         //Callback event
         OnSFXVolumeChanged?.Invoke(volume);
+    }
+    #endregion
+
+    #region Fonts
+    public int GetFontIndex() => PlayerPrefs.GetInt(FONT_KEY, defaultFont);
+    public TMP_FontAsset GetFont()
+    {
+        int index = GetFontIndex();
+        if (index < 0 && index >= fonts.Length)
+            return null;
+
+        return fonts[index];
+    }
+    public void SetFont(int fontIndex)
+    {
+        PlayerPrefs.SetInt(FONT_KEY, fontIndex);
     }
     #endregion
 }
