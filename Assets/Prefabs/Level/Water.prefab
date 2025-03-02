@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 710856826055742921}
   - component: {fileID: 8231792257537030561}
   - component: {fileID: 6716397101548335462}
+  - component: {fileID: 3689613207628007603}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73153799
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1580268895, guid: 94331b24dc140324698e292191df00c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -98,6 +99,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followedPosition: {fileID: 0}
+--- !u!114 &3689613207628007603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6890163905829257917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1af29a151c22534c80377ecfd6e7cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8231792257537030561}
   framesPerSecond: 4
   animationFrames:
   - {fileID: 1580268895, guid: 94331b24dc140324698e292191df00c9, type: 3}
