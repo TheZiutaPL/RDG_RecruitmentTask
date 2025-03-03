@@ -28,9 +28,9 @@ public class PlayerInteraction : MonoBehaviour
     private Collider2D[] cols = new Collider2D[5];
     private Interactable currentInteractable;
     public Action<Interactable> OnInteractableChanged;
-    private void SetCurrentInteractable(Interactable newInteractable)
+    private void SetCurrentInteractable(Interactable newInteractable, bool refreshesIfEqual = false)
     {
-        if (currentInteractable == newInteractable)
+        if (!refreshesIfEqual && currentInteractable == newInteractable)
             return;
 
         currentInteractable = newInteractable;
@@ -123,8 +123,19 @@ public class PlayerInteraction : MonoBehaviour
         if (currentInteractable == null)
             return;
 
-        animator.SetTrigger(currentInteractable.GetInteractionAnimationTrigger());
-        animationTriggeredInteractableEvent = currentInteractable.GetOnInteractionEvent();
+        if (currentInteractable.IsUsingAnimation())
+        {
+            //Caches interactable and sets current to null
+            Interactable temp = currentInteractable;
+            
+            //Triggers animation and passes events
+            animator.SetTrigger(currentInteractable.GetInteractionAnimationTrigger());
+            animationTriggeredInteractableEvent = currentInteractable.GetOnInteractionEvent();
+        }
+        else
+            currentInteractable.GetOnInteractionEvent()?.Invoke();
+
+        RefreshInteraction();
     }
 
     private void OnEnable()

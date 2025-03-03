@@ -11,9 +11,13 @@ public class Interactable : MonoBehaviour
     [SerializeField, Tooltip("Press [] to ____ .")] private string interactionTextSufix = "use";
     public string GetInteractionTextSufix() => interactionTextSufix;
 
-    [SerializeField] private string interactionAnimationTrigger;
-    public string GetInteractionAnimationTrigger() => interactionAnimationTrigger;
-
     [SerializeField] private UnityEvent onInteraction;
     public UnityEvent GetOnInteractionEvent() => onInteraction;
+
+    [Header("Animation")]
+    [SerializeField] private bool usesAnimationToInteract;
+    public bool IsUsingAnimation() => usesAnimationToInteract;
+
+    [SerializeField] private string interactionAnimationTrigger;
+    public string GetInteractionAnimationTrigger() => interactionAnimationTrigger;
 }
