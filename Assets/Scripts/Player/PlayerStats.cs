@@ -30,7 +30,6 @@ public class PlayerStats : MonoBehaviour
     {
         PlayerEntity.Instance.OnDeath += AddDeath;
 
-        //Temp | there will be custscene before starting
         GameManager.Instance.OnGameStarted += () => ToggleTimer(true);
         GameManager.Instance.OnGameEnded += () => ToggleTimer(false);
     }
