@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7ffda9e32997a14cbd224d660d0a941
+guid: 375660907c5848448bf7ac4c3d65798e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Head-Idle_0
+      name: HandFront-Attack_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8b9a54bd3590b945b617ebb4193cb62
-      internalID: -2145028948
+      spriteID: 0ecb4506af488fc4b82dfa4a7be84bff
+      internalID: 1706036146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Head-Idle_1
+      name: HandFront-Attack_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 32
-        height: 32
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce88d991544efd142af59a6a9e0f0c1f
-      internalID: -214658318
+      spriteID: 2f0d139ac2f4b244f827b4b8cdfc0d0d
+      internalID: 1648775793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Head-Idle_2
+      name: HandFront-Attack_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dd73b74006af1c449786c75ebd27b70
-      internalID: 1013147136
+      spriteID: 77898f5e70aeb0f45b555d68ea493a3c
+      internalID: 1306949819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Head-Idle_3
+      name: HandFront-Attack_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 8
-        width: 32
-        height: 32
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +213,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 210a4b38bdea9bb4b88cf23cb0cbb907
-      internalID: -1833269515
+      spriteID: abb5a5e22c1b22d4ba964c19fc17e3cc
+      internalID: -1772224048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HandFront-Attack_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8b8ae3c8343c94c9d9cfacf431bfd3
+      internalID: -397161653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HandFront-Attack_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78490066dee0e742813ef3c499a8aa1
+      internalID: -204620839
       vertices: []
       indices: 
       edges: []
@@ -230,10 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Head-Idle_0: -2145028948
-      Head-Idle_1: -214658318
-      Head-Idle_2: 1013147136
-      Head-Idle_3: -1833269515
+      HandFront-Attack_0: 1706036146
+      HandFront-Attack_1: 1648775793
+      HandFront-Attack_2: 1306949819
+      HandFront-Attack_3: -1772224048
+      HandFront-Attack_4: -397161653
+      HandFront-Attack_5: -204620839
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

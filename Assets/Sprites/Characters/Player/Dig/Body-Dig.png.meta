@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6dbc13bf306edaa4c9c5693af49cbb04
+guid: d4ef7a8a3cf9b2846a3b1f193b614824
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HandFront-Run_0
+      name: Body-Dig_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f221e858a7e494f96764c6ccade230
-      internalID: 377457590
+      spriteID: 0b340da58971458449b22f312eb585e8
+      internalID: 1417424078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_1
+      name: Body-Dig_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 32
-        height: 32
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 780141cc3f12a894ba4fbaa72756802d
-      internalID: -1833270475
+      spriteID: ff20938ec0e0d2f429e859ccd2d6dba1
+      internalID: 792134208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_2
+      name: Body-Dig_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c968f5b497db49747bb99c7d963202f9
-      internalID: -48369657
+      spriteID: ddce795d1ec375c49b896e6bf41a03bc
+      internalID: -492152830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_3
+      name: Body-Dig_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 8
-        width: 32
-        height: 32
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72de07ef9eb122a4c8f3a8bcb8e6973a
-      internalID: 2084856101
+      spriteID: f7dadfa63b345ea41ba765c18bc26de2
+      internalID: -1083994107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_4
+      name: Body-Dig_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 8
-        width: 32
-        height: 32
+        x: 192
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3784560d28e0cb54a800d84a4c301835
-      internalID: -970225061
+      spriteID: f829b6566f045a541a9a648832f87ac2
+      internalID: -101049229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_5
+      name: Body-Dig_5
       rect:
         serializedVersion: 2
-        x: 248
-        y: 8
-        width: 32
-        height: 32
+        x: 240
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5be32882f5c35a44982767157b6b98e2
-      internalID: -762925788
+      spriteID: f0daa8135a060c547af174ce1b6962fa
+      internalID: -737650108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_6
+      name: Body-Dig_6
       rect:
         serializedVersion: 2
-        x: 296
-        y: 8
-        width: 32
-        height: 32
+        x: 288
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51972c78bdfbc6a45b82055d9a08274e
-      internalID: 1838240802
+      spriteID: 58db9cdd127986043b187b8f519bd00b
+      internalID: 1568192674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Run_7
+      name: Body-Dig_7
       rect:
         serializedVersion: 2
-        x: 344
-        y: 8
-        width: 32
-        height: 32
+        x: 336
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +297,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96333e645d212d54496fdbc98c9b5bcb
-      internalID: 1575277388
+      spriteID: 703fae433dffb7b47a3d9f26e37c755a
+      internalID: -822621891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body-Dig_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d483d26a688fda419fc45c7daad7173
+      internalID: 113766034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body-Dig_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39abfdb2c5168547927683366a96a38
+      internalID: 409199044
       vertices: []
       indices: 
       edges: []
@@ -314,14 +356,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HandFront-Run_0: 377457590
-      HandFront-Run_1: -1833270475
-      HandFront-Run_2: -48369657
-      HandFront-Run_3: 2084856101
-      HandFront-Run_4: -970225061
-      HandFront-Run_5: -762925788
-      HandFront-Run_6: 1838240802
-      HandFront-Run_7: 1575277388
+      Body-Dig_0: 1417424078
+      Body-Dig_1: 792134208
+      Body-Dig_2: -492152830
+      Body-Dig_3: -1083994107
+      Body-Dig_4: -101049229
+      Body-Dig_5: -737650108
+      Body-Dig_6: 1568192674
+      Body-Dig_7: -822621891
+      Body-Dig_8: 113766034
+      Body-Dig_9: 409199044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dac9ae823a9a4d1469f83f6c3ec402fb
+guid: 9fcd9c0605b82904692509e0d04f6b3c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Body-Run_0
+      name: HandBack-Dig_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ecf0f4738d5a047bf4d2e4ff4ca4a7
-      internalID: -214985294
+      spriteID: 0435c4bdadb03b3448a9390c2f191e15
+      internalID: 1855927212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_1
+      name: HandBack-Dig_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 32
-        height: 32
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3565979cbd1f8b4da3e153cc52905b6
-      internalID: 1735157349
+      spriteID: a184fc4085de4e443a49f75d82928576
+      internalID: 1557927429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_2
+      name: HandBack-Dig_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ba9f020cfcbccc4f9ae6090487120ba
-      internalID: 1777294981
+      spriteID: 2145821771f19d74a98da01f2d9c2b84
+      internalID: 784611253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_3
+      name: HandBack-Dig_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 8
-        width: 32
-        height: 32
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b67896312b1176444811d8a6886756ea
-      internalID: 1729595281
+      spriteID: 74c47ebfd81a4d349aeb2f5dfe0dadb3
+      internalID: -152077660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_4
+      name: HandBack-Dig_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 8
-        width: 32
-        height: 32
+        x: 192
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 931073391e2d6f74f80acb44f2c3a054
-      internalID: -519431600
+      spriteID: d8c946238b8bcc14a88d6e520a3e1313
+      internalID: -1046403381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_5
+      name: HandBack-Dig_5
       rect:
         serializedVersion: 2
-        x: 248
-        y: 8
-        width: 32
-        height: 32
+        x: 240
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3581a35fb1e44c44b82cfe9421eb6b2
-      internalID: 482251446
+      spriteID: 1dfabf5f5cd99d24eb27631f77bfc484
+      internalID: 1092357625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_6
+      name: HandBack-Dig_6
       rect:
         serializedVersion: 2
-        x: 296
-        y: 8
-        width: 32
-        height: 32
+        x: 288
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cec41d84054cf294a934fc81c91b4e74
-      internalID: 1189206898
+      spriteID: b20898f35f0e6f74d97a1c7787d13574
+      internalID: 1583516731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Run_7
+      name: HandBack-Dig_7
       rect:
         serializedVersion: 2
-        x: 344
-        y: 8
-        width: 32
-        height: 32
+        x: 336
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +297,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770b4d90b7a5b6841a8d9c18b6552c68
-      internalID: -808952906
+      spriteID: 4d2f604ec10a4dd4ab217979f627996b
+      internalID: -1308239307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HandBack-Dig_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b2f94be5ad55346b3d9c6f032280b9
+      internalID: -1136871325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HandBack-Dig_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf2c5fcbc29dfb4faceae02bbb94d29
+      internalID: 765668341
       vertices: []
       indices: 
       edges: []
@@ -314,14 +356,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Body-Run_0: -214985294
-      Body-Run_1: 1735157349
-      Body-Run_2: 1777294981
-      Body-Run_3: 1729595281
-      Body-Run_4: -519431600
-      Body-Run_5: 482251446
-      Body-Run_6: 1189206898
-      Body-Run_7: -808952906
+      HandBack-Dig_0: 1855927212
+      HandBack-Dig_1: 1557927429
+      HandBack-Dig_2: 784611253
+      HandBack-Dig_3: -152077660
+      HandBack-Dig_4: -1046403381
+      HandBack-Dig_5: 1092357625
+      HandBack-Dig_6: 1583516731
+      HandBack-Dig_7: -1308239307
+      HandBack-Dig_8: -1136871325
+      HandBack-Dig_9: 765668341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

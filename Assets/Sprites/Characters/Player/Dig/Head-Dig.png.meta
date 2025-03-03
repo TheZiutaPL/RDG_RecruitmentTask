@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3bda3c62202092e44a65010fa6a65490
+guid: 006b0abc435278a479b87cbd2d298631
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HandFront-Idle_0
+      name: Head-Dig_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1984b0b9ea0d97d4083b5e5f74b03ddf
-      internalID: -995387092
+      spriteID: 862101afba3ce0a488a27b76ced176c6
+      internalID: 528910895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Idle_1
+      name: Head-Dig_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 32
-        height: 32
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23ac5877100bd545b8bbc3ce450933f
-      internalID: -1677690852
+      spriteID: b50e3944427159641af2ca436b3b58d7
+      internalID: -1823956496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Idle_2
+      name: Head-Dig_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbf5663374f069b44ac1d69280997c34
-      internalID: -1442867737
+      spriteID: 41b1c6c37cc3be04f9a90417d1d3f3bc
+      internalID: -255273083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandFront-Idle_3
+      name: Head-Dig_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 8
-        width: 32
-        height: 32
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +213,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2afb41f0da8c854ea851519429fcb1b
-      internalID: -648193589
+      spriteID: f04b37552081b934d908361c2bf4e21f
+      internalID: -1231461214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head-Dig_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522e254a006ae3a4cbd066f078d151aa
+      internalID: -1850573926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head-Dig_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecef164268981c419e45c9592a1e405
+      internalID: -1077930560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head-Dig_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4129d6d69ac294c8b6d3779c130751
+      internalID: 1544524131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head-Dig_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe5980dd1b65e543b3afc4e684516ee
+      internalID: 1053943859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head-Dig_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1a3e34fb5519242b259c0e975ade57
+      internalID: -1122860571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head-Dig_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ea6ece6099c6a4c9e266b94efde238
+      internalID: 875905050
       vertices: []
       indices: 
       edges: []
@@ -230,10 +356,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HandFront-Idle_0: -995387092
-      HandFront-Idle_1: -1677690852
-      HandFront-Idle_2: -1442867737
-      HandFront-Idle_3: -648193589
+      Head-Dig_0: 528910895
+      Head-Dig_1: -1823956496
+      Head-Dig_2: -255273083
+      Head-Dig_3: -1231461214
+      Head-Dig_4: -1850573926
+      Head-Dig_5: -1077930560
+      Head-Dig_6: 1544524131
+      Head-Dig_7: 1053943859
+      Head-Dig_8: -1122860571
+      Head-Dig_9: 875905050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6aa136260baf214449a24ea6bdc7f406
+guid: 3bda3c62202092e44a65010fa6a65490
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hand Back-Idle_0
+      name: HandFront-Idle_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c06f25d82ffd52469d7eec8d45e59d4
-      internalID: 1593494278
+      spriteID: 1984b0b9ea0d97d4083b5e5f74b03ddf
+      internalID: -995387092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hand Back-Idle_1
+      name: HandFront-Idle_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 32
-        height: 32
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74c6dbbc3e5c20a4a979c72b5bee0c27
-      internalID: -2077062737
+      spriteID: c23ac5877100bd545b8bbc3ce450933f
+      internalID: -1677690852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hand Back-Idle_2
+      name: HandFront-Idle_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edba2de73f19c574b802efb55887fc22
-      internalID: -344191113
+      spriteID: cbf5663374f069b44ac1d69280997c34
+      internalID: -1442867737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hand Back-Idle_3
+      name: HandFront-Idle_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 8
-        width: 32
-        height: 32
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f25ca745e5f5d314bb7de6b180aa45cb
-      internalID: -1724361422
+      spriteID: d2afb41f0da8c854ea851519429fcb1b
+      internalID: -648193589
       vertices: []
       indices: 
       edges: []
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hand Back-Idle_0: 1593494278
-      Hand Back-Idle_1: -2077062737
-      Hand Back-Idle_2: -344191113
-      Hand Back-Idle_3: -1724361422
+      HandFront-Idle_0: -995387092
+      HandFront-Idle_1: -1677690852
+      HandFront-Idle_2: -1442867737
+      HandFront-Idle_3: -648193589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

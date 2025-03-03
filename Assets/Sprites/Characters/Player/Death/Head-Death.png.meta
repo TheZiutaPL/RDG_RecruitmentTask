@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 271d2cd84d6a1d04e9ad7890c07ed0ac
+guid: 2b22d6dfaa1347f48983312f95ec0257
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HandBack-Run_0
+      name: Head-Death_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e64bb3fa6d38144ac1b45024b1d8e8
-      internalID: -1750622644
+      spriteID: a044da70f52f2a542881394b7e95ebb4
+      internalID: 317764504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_1
+      name: Head-Death_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 32
-        height: 32
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4125636d4404b247a180b34789811b4
-      internalID: 612702672
+      spriteID: e6fbebcf939c9a04fac2aa1a819a7613
+      internalID: -336050620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_2
+      name: Head-Death_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 563a12d04e0db54408b56d9a3b44a803
-      internalID: -901674562
+      spriteID: 450216a24d7742244bad4e5b829b376c
+      internalID: -887915844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_3
+      name: Head-Death_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 8
-        width: 32
-        height: 32
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec77feed8872db84185e764ec43b8072
-      internalID: -336848393
+      spriteID: 0857d37a74b09d749a8cb4027c09ac4b
+      internalID: -581655219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_4
+      name: Head-Death_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 8
-        width: 32
-        height: 32
+        x: 192
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faa7ed7f30ded3940953c55dbbb0cde3
-      internalID: 1896170763
+      spriteID: cf33b270babd2284a8a2c6219143933f
+      internalID: -1745612060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_5
+      name: Head-Death_5
       rect:
         serializedVersion: 2
-        x: 248
-        y: 8
-        width: 32
-        height: 32
+        x: 240
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1edb61ef823a3144d83d3040f2bfab38
-      internalID: -831601229
+      spriteID: ffb58ee5c72c9374b8fa0ce15c2ca9d3
+      internalID: -1489787667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_6
+      name: Head-Death_6
       rect:
         serializedVersion: 2
-        x: 296
-        y: 8
-        width: 32
-        height: 32
+        x: 288
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa143283946600b48a5ba4071c50a727
-      internalID: 1341431386
+      spriteID: 3b965f25e2e866b46acaec340f104bb6
+      internalID: 1313434647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HandBack-Run_7
+      name: Head-Death_7
       rect:
         serializedVersion: 2
-        x: 344
-        y: 8
-        width: 32
-        height: 32
+        x: 336
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db5504873b75554c906cbcbe150fecb
-      internalID: 1445409778
+      spriteID: c4799a3a1b0240241be119a4175fc870
+      internalID: -1777492695
       vertices: []
       indices: 
       edges: []
@@ -314,14 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HandBack-Run_0: -1750622644
-      HandBack-Run_1: 612702672
-      HandBack-Run_2: -901674562
-      HandBack-Run_3: -336848393
-      HandBack-Run_4: 1896170763
-      HandBack-Run_5: -831601229
-      HandBack-Run_6: 1341431386
-      HandBack-Run_7: 1445409778
+      Head-Death_0: 317764504
+      Head-Death_1: -336050620
+      Head-Death_2: -887915844
+      Head-Death_3: -581655219
+      Head-Death_4: -1745612060
+      Head-Death_5: -1489787667
+      Head-Death_6: 1313434647
+      Head-Death_7: -1777492695
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
