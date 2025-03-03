@@ -30,7 +30,7 @@ public class LevelGenerator : MonoBehaviour
         return groundMask[roundedPosition.x, roundedPosition.y];
     }
 
-    [Header("Visuals")]
+    [Header("Tiles")]
     [SerializeField] private Tilemap groundTilemap;
     [SerializeField] private RuleTile sandTile;
     [SerializeField] private RuleTile grassTile;
@@ -67,15 +67,26 @@ public class LevelGenerator : MonoBehaviour
     private System.Random randomizer;
     private Collider2D[] spawnCols = new Collider2D[5];
 
-    [Header("Valuables Generation")]
-    [SerializeField] private int spawnedCoins;
+    [Header("Spawning")]
     [SerializeField] private int maxSpawnAttempts = 50;
-    [SerializeField] private Coin[] coins = new Coin[0];
+    [SerializeField] private float spawnCollisionRadius;
+
+    [Header("Coins Spawning")]
+    [SerializeField] private Transform coinsParent;
+    [SerializeField] private Coin[] coinPrefabs = new Coin[0];
+    [SerializeField] private int spawnedCoins;
     [SerializeField, Tooltip("Random value between 0 and 1 is evaluated to give a curve value, higher the value, higher index in array is picked")]
     private AnimationCurve coinsSpawningChanceCurve;
-    [SerializeField] private float coinCollisionRadius;
     [SerializeField] private LayerMask coinCollisionMask;
-    private List<GameObject> spawnedValuableObjects = new List<GameObject>();
+
+    [Header("Treasure Spawning")]
+    [SerializeField] private Transform treasuresParent;
+    [SerializeField] private Transform treasureCoinsParent;
+    [SerializeField] private Treasure treasurePrefab;
+    [SerializeField] private int treasureCount = 3;
+    [SerializeField] private int treasureValue = 35;
+    [SerializeField] private LayerMask treasureCollisionMask;
+    private List<Treasure> spawnedTreasures = new List<Treasure>();
 
     private void Start()
     {        
@@ -96,10 +107,10 @@ public class LevelGenerator : MonoBehaviour
         clutterTilemap.ClearAllTiles();
         obstacleTilemap.ClearAllTiles();
 
-        //Clears spawned valuables
-        for (int i = 0; i < spawnedValuableObjects.Count; i++)
-            Destroy(spawnedValuableObjects[i]);
-        spawnedValuableObjects.Clear();
+        //Clears spawned objects
+        ClearTransformChildren(coinsParent);
+        ClearTransformChildren(treasuresParent);
+        ClearTransformChildren(treasureCoinsParent);
 
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
@@ -184,30 +195,41 @@ public class LevelGenerator : MonoBehaviour
     private void GenerateCoinsAndTreasures()
     {
         //Spawns coins
-        if (coins.Length > 0)
+        if (coinPrefabs.Length > 0)
         {
             //Method that returns desired coin index
             int GetCoinIndex()
             {
                 double rand = randomizer.NextDouble();
-                float rawIndex = coinsSpawningChanceCurve.Evaluate((float)rand) * coins.Length;
-                Debug.Log(rawIndex);
-                return Mathf.FloorToInt(rawIndex % coins.Length);
+                float rawIndex = coinsSpawningChanceCurve.Evaluate((float)rand) * coinPrefabs.Length;
+                return Mathf.FloorToInt(rawIndex % coinPrefabs.Length);
             }
 
             //Spawning objects (not all objects are guaranteed to spawn)
             for (int i = 0; i < spawnedCoins; i++)
-            {
-                Coin coinObject = TrySpawningObjectOnMap(coins[GetCoinIndex()], coinCollisionRadius, coinCollisionMask);
+                TrySpawningObjectOnMap(coinPrefabs[GetCoinIndex()], coinsParent, spawnCollisionRadius, coinCollisionMask);
+        }
 
-                //If a code succeed spawning a coin, adds it to list
-                if (coinObject != null)
-                    spawnedValuableObjects.Add(coinObject.gameObject);
+        //Spawns treasures
+        for (int i = 0; i < treasureCount; i++)
+        {
+            Treasure treasure = TrySpawningObjectOnMap(treasurePrefab, treasuresParent, spawnCollisionRadius, treasureCollisionMask);
+
+            if (treasure != null)
+            {
+                treasure.SetTreasureContent(treasureValue, treasureCoinsParent);
+                spawnedTreasures.Add(treasure);
             }
         }
     }
 
-    private T TrySpawningObjectOnMap<T>(T objectToSpawn, float collisionRadius, LayerMask collisionMask) where T : Object
+    private void ClearTransformChildren(Transform parent)
+    {
+        foreach (Transform child in parent)
+            Destroy(child.gameObject);
+    }
+
+    private T TrySpawningObjectOnMap<T>(T objectToSpawn, Transform parent, float collisionRadius, LayerMask collisionMask) where T : Object
     {
         T spawned = null;
 
@@ -216,12 +238,12 @@ public class LevelGenerator : MonoBehaviour
             //Gets random position for this attempt
             int x = randomizer.Next(0, mapSize.x);
             int y = randomizer.Next(0, mapSize.y);
-            Vector2 position = new Vector2(x, y);
+            Vector2 position = new Vector2(x, y) - halfSizeOffset;
 
-            //Try spawning on position
+            //Try spawning on position            
             if (groundMask[x, y] && Physics2D.OverlapCircleNonAlloc(position, collisionRadius, spawnCols, collisionMask) == 0)
             {
-                spawned = Instantiate(objectToSpawn, position - halfSizeOffset, Quaternion.identity);
+                spawned = Instantiate(objectToSpawn, position, Quaternion.identity, parent);
                 break;
             }
         }

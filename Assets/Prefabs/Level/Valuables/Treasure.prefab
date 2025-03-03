@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372685626081723394}
-  m_Layer: 0
+  - component: {fileID: 4269688101380897709}
+  - component: {fileID: -838838360032601882}
+  m_Layer: 7
   m_Name: Treasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,60 @@ Transform:
   - {fileID: 1323180742054209858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4269688101380897709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280583172170597318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6610748223bfdb2429984c3872901529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefabs:
+  - {fileID: 7274372979410492725, guid: 4fdc65f45c2c3e441949ecc4a3ae4216, type: 3}
+  - {fileID: 7274372979410492725, guid: 5a037ba601a735448a8a6a62bf7711a9, type: 3}
+  - {fileID: 7274372979410492725, guid: 8034899e94034d6488d48a0a1c544da1, type: 3}
+  coinSpreadRange: 2.5
+  diggedCoinsMin: 2
+  diggedCoinsMax: 5
+--- !u!58 &-838838360032601882
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280583172170597318}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1628074430054351991
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323180742054209858}
   - component: {fileID: 117619391968204937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
