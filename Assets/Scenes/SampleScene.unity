@@ -1526,6 +1526,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 117619391968204937, guid: aeba032d2d56de44486ac62361d0dd86, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 280583172170597318, guid: aeba032d2d56de44486ac62361d0dd86, type: 3}
       propertyPath: m_Name
       value: Treasure
