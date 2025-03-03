@@ -5,7 +5,6 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private int value;
-    [SerializeField] private AudioClip pickSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,10 +13,7 @@ public class Coin : MonoBehaviour
             //Add coins
             PlayerStats.Instance.AddCoins(value);
 
-            //Plays sound
-            AudioManager.Instance.PlaySFX(pickSound);
-
-            //Destroys
+            //Destroys itself
             Destroy(gameObject);
         }
     }

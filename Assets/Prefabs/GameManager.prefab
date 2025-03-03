@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3234044868669592080}
   - component: {fileID: 1872819009169629846}
+  - component: {fileID: 267120755257689467}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,3 +45,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75c9dbe2011d084fa20d0f9fe85a242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredCoins: 25
+--- !u!114 &267120755257689467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345554411160743664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f53f8fa19ca8224e9f95862786cba8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPickupSound: {fileID: 8300000, guid: 2ba424a524eba9f448eae32be48d39d1, type: 3}

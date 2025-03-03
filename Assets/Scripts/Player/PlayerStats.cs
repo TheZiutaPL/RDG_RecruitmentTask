@@ -11,7 +11,9 @@ public class PlayerStats : MonoBehaviour
     public void ToggleTimer(bool toggle) => timerToggled = toggle;
     public float TimePassed { get; private set; }
 
+    [SerializeField] private AudioClip coinPickupSound; 
     public int Coins { get; private set; }
+
     public int Deaths { get; private set; }
 
     public Action OnStatsChanged;
@@ -29,7 +31,8 @@ public class PlayerStats : MonoBehaviour
         PlayerEntity.Instance.OnDeath += AddDeath;
 
         //Temp | there will be custscene before starting
-        timerToggled = true;
+        GameManager.Instance.OnGameStarted += () => ToggleTimer(true);
+        GameManager.Instance.OnGameEnded += () => ToggleTimer(false);
     }
 
     private void Update()
@@ -42,14 +45,17 @@ public class PlayerStats : MonoBehaviour
     {
         Coins += newCoins;
 
-        RefreshStarts();
+        //Plays sound
+        AudioManager.Instance.PlaySFX(coinPickupSound);
+
+        RefreshStats();
     }
 
     public void AddDeath()
     {
         Deaths++;
-        RefreshStarts();
+        RefreshStats();
     }
 
-    private void RefreshStarts() => OnStatsChanged?.Invoke();
+    private void RefreshStats() => OnStatsChanged?.Invoke();
 }

@@ -41,7 +41,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 10, y: 10}
-  m_SizeDelta: {x: 150, y: 0}
+  m_SizeDelta: {x: 175, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1529655863902018514
 MonoBehaviour:
@@ -57,6 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 887133226199290626}
   coinsText: {fileID: 8436226532584142752}
+  coinsGatheredColor: {r: 0, g: 0.8509804, b: 0.039215688, a: 1}
   deathsText: {fileID: 8980114733469290964}
 --- !u!114 &8382946810308264848
 MonoBehaviour:

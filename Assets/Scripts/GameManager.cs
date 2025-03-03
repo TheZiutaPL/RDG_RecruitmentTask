@@ -13,12 +13,33 @@ public class GameManager : MonoBehaviour
     public bool GamePaused { get; private set; }
     public Action<bool> OnGamePaused;
 
+    [SerializeField] private int requiredCoins;
+    public int GetRequiredCoins() => requiredCoins;
+    public bool HasRequiredCoins() => PlayerStats.Instance.Coins >= requiredCoins;
+    private void CheckRequiredCoins()
+    {
+        if (PlayerStats.Instance.Coins < GetRequiredCoins())
+            return;
+
+        OnRequiredCoinsGathered?.Invoke();
+    }
+    public Action OnRequiredCoinsGathered;
+
     public void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
-            Destroy(gameObject);
+            Destroy(this);
+    }
+
+    IEnumerator Start()
+    {
+        PlayerStats.Instance.OnStatsChanged += CheckRequiredCoins;
+
+        //Wait for all other events to set up before starting
+        yield return new WaitForEndOfFrame();
+        StartGame();
     }
 
     public void StartGame()

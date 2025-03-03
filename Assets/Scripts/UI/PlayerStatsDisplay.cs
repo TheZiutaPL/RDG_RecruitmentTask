@@ -6,8 +6,17 @@ using TMPro;
 public class PlayerStatsDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timeText;
+
     [SerializeField] private TextMeshProUGUI coinsText;
+    [SerializeField] private Color coinsGatheredColor;
+    private Color defaultCoinsColor;
+
     [SerializeField] private TextMeshProUGUI deathsText;
+
+    private void Awake()
+    {
+        defaultCoinsColor = coinsText.color;
+    }
 
     private void Start()
     {
@@ -22,7 +31,9 @@ public class PlayerStatsDisplay : MonoBehaviour
 
     private void RefreshStatsDisplay()
     {
-        coinsText.SetText(PlayerStats.Instance.Coins.ToString());
+        coinsText.color = GameManager.Instance.HasRequiredCoins() ? coinsGatheredColor : defaultCoinsColor;
+        coinsText.SetText($"{PlayerStats.Instance.Coins}/{GameManager.Instance.GetRequiredCoins()}");
+
         deathsText.SetText(PlayerStats.Instance.Deaths.ToString());
     }
 }
