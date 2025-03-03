@@ -8,10 +8,7 @@ public class Entity : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int health;
 
-    /// <summary>
-    /// Event invoked whenever health has been changed. Its arguments are NewHealthValue and AddedValue
-    /// </summary>
-    public Action<int, int> OnChangeHealth;
+    public Action<int> OnChangeHealth;
     public Action OnDeath;
 
     private void Start()
@@ -24,12 +21,12 @@ public class Entity : MonoBehaviour
         health = maxHealth;
     }
 
-    public void AddHP(int add)
+    public void Damage()
     {
-        health = Mathf.Clamp(health + add, 0, maxHealth);
-        OnChangeHealth?.Invoke(health, add);
+        health--;
+        OnChangeHealth?.Invoke(health);
 
-        if (health < 0)
+        if (health <= 0)
             Die();
     }
 
