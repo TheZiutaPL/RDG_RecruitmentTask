@@ -56,7 +56,6 @@ public class LevelGenerator : MonoBehaviour
 
     [Space(10)]
 
-
     [Header("Extras Generation")]
     [SerializeField] private float obstacleNoiseScale = 10;
     [SerializeField, Range(0, 1)] private float groundExtrasStep = .6f;

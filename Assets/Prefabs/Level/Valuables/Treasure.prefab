@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Treasure
+  interactionTextSufix: dig up
   interactionAnimationTrigger: dig
   onInteraction:
     m_PersistentCalls:
