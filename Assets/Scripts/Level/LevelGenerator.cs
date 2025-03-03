@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
 using UnityEngine.Tilemaps;
+using Object = UnityEngine.Object;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class LevelGenerator : MonoBehaviour
         if (groundMask == null)
             return false;
 
-        Vector2Int roundedPosition = Vector2Int.RoundToInt(position) + halfSizeOffset;
+        Vector2Int roundedPosition = Vector2Int.RoundToInt(position + halfSizeOffset);
         if (roundedPosition.x < 0 || roundedPosition.x >= groundMask.GetLength(0) || roundedPosition.y < 0 || roundedPosition.y >= groundMask.GetLength(1))
             return false;
 
@@ -53,6 +54,9 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField, Tooltip("Value added to the groundStep to place grass instead of sand")]
     private float grassAdditionalStep = 0.125f;
 
+    [Space(10)]
+
+
     [Header("Extras Generation")]
     [SerializeField] private float obstacleNoiseScale = 10;
     [SerializeField, Range(0, 1)] private float groundExtrasStep = .6f;
@@ -61,6 +65,17 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private float spawnProtectionRange = 7.5f;
 
     private System.Random randomizer;
+    private Collider2D[] spawnCols = new Collider2D[5];
+
+    [Header("Valuables Generation")]
+    [SerializeField] private int spawnedCoins;
+    [SerializeField] private int maxSpawnAttempts = 50;
+    [SerializeField] private Coin[] coins = new Coin[0];
+    [SerializeField, Tooltip("Random value between 0 and 1 is evaluated to give a curve value, higher the value, higher index in array is picked")]
+    private AnimationCurve coinsSpawningChanceCurve;
+    [SerializeField] private float coinCollisionRadius;
+    [SerializeField] private LayerMask coinCollisionMask;
+    private List<GameObject> spawnedValuableObjects = new List<GameObject>();
 
     private void Start()
     {        
@@ -81,12 +96,19 @@ public class LevelGenerator : MonoBehaviour
         clutterTilemap.ClearAllTiles();
         obstacleTilemap.ClearAllTiles();
 
+        //Clears spawned valuables
+        for (int i = 0; i < spawnedValuableObjects.Count; i++)
+            Destroy(spawnedValuableObjects[i]);
+        spawnedValuableObjects.Clear();
+
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
         
         GenerateMap();
 
         GenerateClutterAndObstacles();
+
+        GenerateCoinsAndTreasures();
     }
 
     /// <summary>
@@ -154,6 +176,57 @@ public class LevelGenerator : MonoBehaviour
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Generates coins and treasures on a map
+    /// </summary>
+    private void GenerateCoinsAndTreasures()
+    {
+        //Spawns coins
+        if (coins.Length > 0)
+        {
+            //Method that returns desired coin index
+            int GetCoinIndex()
+            {
+                double rand = randomizer.NextDouble();
+                float rawIndex = coinsSpawningChanceCurve.Evaluate((float)rand) * coins.Length;
+                Debug.Log(rawIndex);
+                return Mathf.FloorToInt(rawIndex % coins.Length);
+            }
+
+            //Spawning objects (not all objects are guaranteed to spawn)
+            for (int i = 0; i < spawnedCoins; i++)
+            {
+                Coin coinObject = TrySpawningObjectOnMap(coins[GetCoinIndex()], coinCollisionRadius, coinCollisionMask);
+
+                //If a code succeed spawning a coin, adds it to list
+                if (coinObject != null)
+                    spawnedValuableObjects.Add(coinObject.gameObject);
+            }
+        }
+    }
+
+    private T TrySpawningObjectOnMap<T>(T objectToSpawn, float collisionRadius, LayerMask collisionMask) where T : Object
+    {
+        T spawned = null;
+
+        for (int attempts = 0; attempts < maxSpawnAttempts; attempts++)
+        {
+            //Gets random position for this attempt
+            int x = randomizer.Next(0, mapSize.x);
+            int y = randomizer.Next(0, mapSize.y);
+            Vector2 position = new Vector2(x, y);
+
+            //Try spawning on position
+            if (groundMask[x, y] && Physics2D.OverlapCircleNonAlloc(position, collisionRadius, spawnCols, collisionMask) == 0)
+            {
+                spawned = Instantiate(objectToSpawn, position - halfSizeOffset, Quaternion.identity);
+                break;
+            }
+        }
+
+        return spawned;
     }
 
     public float[,] GetPerlinNoise(int width, int height, float scale = 1)

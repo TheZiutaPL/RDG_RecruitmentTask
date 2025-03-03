@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementDirection;
 
     [Header("Water Movement")]
+    [SerializeField] private Transform groundCheckTransform;
     [SerializeField] private float waterMovementSpeedMultiplier = .75f;
     public bool IsInWater { get; private set; }
 
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        IsInWater = !LevelGenerator.IsGround(transform.position);
+        IsInWater = !LevelGenerator.IsGround(groundCheckTransform.position);
 
         HandleVisuals();
 
