@@ -42,14 +42,11 @@ public class Treasure : MonoBehaviour
 
             spawnedValue += coinPrefabs[index].Value;
         }
-
-        SpreadCoinsAtRandom();
     }
 
-    private void SpreadCoinsAtRandom()
+    private void SpreadCoinAtRandom(Transform coinTransform)
     {
-        for (int i = 0; i < buriedCoins.Count; i++)
-            buriedCoins[i].transform.position += (Vector3)(coinSpreadRange * Random.insideUnitCircle);
+        coinTransform.position = transform.position + (Vector3)(coinSpreadRange * Random.insideUnitCircle);
     }
 
     [ContextMenu("Dig up coins")]
@@ -62,6 +59,7 @@ public class Treasure : MonoBehaviour
         int iterations = Mathf.Min(diggedCoins, buriedCoins.Count) - 1;
         for (int i = iterations; i >= 0; i--)
         {
+            SpreadCoinAtRandom(buriedCoins[i].transform);
             buriedCoins[i].SetActive(true);
             buriedCoins.RemoveAt(i);
         }

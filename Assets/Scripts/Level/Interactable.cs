@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    public bool isInteractable = true;
+
     [SerializeField] private string interactableName;
     public string GetInteractableName() => interactableName;
 

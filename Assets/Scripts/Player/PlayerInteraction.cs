@@ -78,6 +78,9 @@ public class PlayerInteraction : MonoBehaviour
         #endregion
     }
 
+    /// <summary>
+    /// Determines with which interactable is targetted
+    /// </summary>
     private void RefreshInteraction()
     {
         if (!canInteract)
@@ -89,7 +92,7 @@ public class PlayerInteraction : MonoBehaviour
         List<Interactable> interactables = new List<Interactable>();
         for (int i = 0; i < overlapped; i++)
         {
-            if (cols[i].TryGetComponent(out Interactable interactable))
+            if (cols[i].TryGetComponent(out Interactable interactable) && interactable.isInteractable)
                 interactables.Add(interactable);
         }
 
