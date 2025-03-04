@@ -17,7 +17,7 @@ public class LeaderboardRunDisplay : MonoBehaviour
     [SerializeField] private float animationDuration = 2;
     private bool isNew;
 
-    private void Start()
+    private void Update()
     {
         if (!isNew)
             return;

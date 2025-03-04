@@ -363,7 +363,7 @@ MonoBehaviour:
   deathsText: {fileID: 6895860047303998974}
   minScale: 0.95
   maxScale: 1.05
-  animationDuration: 2
+  animationDuration: 1.5
 --- !u!114 &3508875907017634506
 MonoBehaviour:
   m_ObjectHideFlags: 0
