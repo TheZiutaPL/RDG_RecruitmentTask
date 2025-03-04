@@ -62,6 +62,15 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GuideSpell"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab83883e-c8a5-4ede-afa1-2ed316c61a2a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -205,6 +214,17 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24ccdc56-8af2-49a9-ae76-b9eb4d27540b"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GuideSpell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -735,6 +755,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         m_Game_Pause = m_Game.FindAction("Pause", throwIfNotFound: true);
         m_Game_Attack = m_Game.FindAction("Attack", throwIfNotFound: true);
         m_Game_Interaction = m_Game.FindAction("Interaction", throwIfNotFound: true);
+        m_Game_GuideSpell = m_Game.FindAction("GuideSpell", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -812,6 +833,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Pause;
     private readonly InputAction m_Game_Attack;
     private readonly InputAction m_Game_Interaction;
+    private readonly InputAction m_Game_GuideSpell;
     public struct GameActions
     {
         private @GameInputs m_Wrapper;
@@ -820,6 +842,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_Game_Pause;
         public InputAction @Attack => m_Wrapper.m_Game_Attack;
         public InputAction @Interaction => m_Wrapper.m_Game_Interaction;
+        public InputAction @GuideSpell => m_Wrapper.m_Game_GuideSpell;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -841,6 +864,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
+            @GuideSpell.started += instance.OnGuideSpell;
+            @GuideSpell.performed += instance.OnGuideSpell;
+            @GuideSpell.canceled += instance.OnGuideSpell;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -857,6 +883,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
+            @GuideSpell.started -= instance.OnGuideSpell;
+            @GuideSpell.performed -= instance.OnGuideSpell;
+            @GuideSpell.canceled -= instance.OnGuideSpell;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -998,6 +1027,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
+        void OnGuideSpell(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

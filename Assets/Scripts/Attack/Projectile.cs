@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
         //Makes projectile face its direction
         transform.rotation = Quaternion.LookRotation(direction);
 
+
         //Destroys projectile after some time
         Destroy(gameObject, lifetime);
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 710856826055742921}
   - component: {fileID: 8231792257537030561}
   - component: {fileID: 6716397101548335462}
-  - component: {fileID: 3689613207628007603}
+  - component: {fileID: 8265062592900730504}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followedPosition: {fileID: 0}
---- !u!114 &3689613207628007603
+--- !u!114 &8265062592900730504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -11,7 +11,15 @@ public class EndingPortal : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.OnRequiredCoinsGathered += () => TogglePortal(true);
+        GameManager.Instance.OnRequiredCoinsGathered += () =>
+        {
+            //Sets portal as a player goal
+            List<Transform> portalGoal = new List<Transform>();
+            portalGoal.Add(transform);
+            GameManager.Instance.SetPlayerGoals(portalGoal);
+
+            TogglePortal(true);
+        };
     }
 
     private void TogglePortal(bool toggle)

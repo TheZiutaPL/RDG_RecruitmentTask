@@ -13,6 +13,39 @@ public class GameManager : MonoBehaviour
     public bool GamePaused { get; private set; }
     public Action<bool> OnGamePaused;
 
+    #region Player Goals
+    private List<Transform> playerGoals = new List<Transform>();
+    public void SetPlayerGoals(List<Transform> goals) => playerGoals = new List<Transform>(goals);
+    public Vector3 GetClosestPlayerGoalPosition(Vector3 playerPosition)
+    {
+        Vector3 noGoalReturn = Vector3.zero;
+
+        if (playerGoals.Count == 0)
+            return noGoalReturn;
+        else
+        {
+            int closestIndex = -1;
+            float closestDistance = 50000;
+            for (int i = 0; i < playerGoals.Count; i++)
+            {
+                Transform currentTransform = playerGoals[i];
+                if (currentTransform == null)
+                    continue;
+
+                float distance = Vector3.Distance(playerPosition, currentTransform.position);
+                if (distance < closestDistance)
+                {
+                    closestIndex = i;
+                    closestDistance = distance;
+                }
+            }
+
+            return closestIndex < 0 ? noGoalReturn : playerGoals[closestIndex].position;
+        }
+    }
+    #endregion
+
+    #region Coins
     [SerializeField] private int requiredCoins;
     public int GetRequiredCoins() => requiredCoins;
     public bool HasRequiredCoins() => PlayerStats.Instance.Coins >= requiredCoins;
@@ -24,6 +57,7 @@ public class GameManager : MonoBehaviour
         OnRequiredCoinsGathered?.Invoke();
     }
     public Action OnRequiredCoinsGathered;
+    #endregion
 
     public void Awake()
     {

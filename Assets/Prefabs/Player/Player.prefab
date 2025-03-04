@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1170342227208070149}
   - component: {fileID: 3110016590779145791}
   - component: {fileID: 2806565174660328564}
+  - component: {fileID: 5294632190723938710}
   - component: {fileID: 3322258555210963047}
   - component: {fileID: 7126426572399890307}
   - component: {fileID: 7926027194775889483}
@@ -239,6 +240,23 @@ MonoBehaviour:
   playerVisualsTransform: {fileID: 4199101919865080911}
   playerAnimator: {fileID: 1898467544197119184}
   waterMovementParticles: {fileID: 986358328054493845}
+--- !u!114 &5294632190723938710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963407393488907980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25dd8b967378a5e44ad343225aaaaba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guideSpawnDistance: 0.5
+  guideCooldown: 2.5
+  guideSpellPrefab: {fileID: 3645903299651943576, guid: 557fd86254571de438fe5ddcf0314ccb, type: 3}
+  guideSpeed: 8
+  guideLifetime: 3.5
 --- !u!114 &3322258555210963047
 MonoBehaviour:
   m_ObjectHideFlags: 0

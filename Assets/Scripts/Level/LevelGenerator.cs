@@ -85,7 +85,6 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private int treasureCount = 3;
     [SerializeField] private int treasureValue = 35;
     [SerializeField] private LayerMask treasureCollisionMask;
-    private List<Treasure> spawnedTreasures = new List<Treasure>();
 
     private void Start()
     {        
@@ -210,6 +209,7 @@ public class LevelGenerator : MonoBehaviour
         }
 
         //Spawns treasures
+        List<Transform> treasureTransforms = new List<Transform>();
         for (int i = 0; i < treasureCount; i++)
         {
             Treasure treasure = TrySpawningObjectOnMap(treasurePrefab, treasuresParent, spawnCollisionRadius, treasureCollisionMask);
@@ -217,9 +217,12 @@ public class LevelGenerator : MonoBehaviour
             if (treasure != null)
             {
                 treasure.SetTreasureContent(treasureValue, treasureCoinsParent);
-                spawnedTreasures.Add(treasure);
+                treasureTransforms.Add(treasure.transform);
             }
         }
+
+        //Sets treasure transforms as player goals
+        GameManager.Instance.SetPlayerGoals(treasureTransforms);
     }
 
     private void ClearTransformChildren(Transform parent)
