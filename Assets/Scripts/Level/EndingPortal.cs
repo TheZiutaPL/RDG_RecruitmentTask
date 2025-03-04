@@ -30,14 +30,15 @@ public class EndingPortal : MonoBehaviour
 
     public void UsePortal()
     {
+        portalInteractable.isInteractable = false;
+
         //Ends Game
         GameManager.Instance.EndGame();
 
-        //Save scores
-        //
-
-        //Spawn "new highscore pass" object, which highlights new highscore in menu
-        //
+        //Saves scores
+        SaveUnit newSaveUnit = new SaveUnit(PlayerStats.Instance.TimePassed, PlayerStats.Instance.Coins, PlayerStats.Instance.Deaths);
+        SaveSystem.SaveFile.AddSaveUnit(newSaveUnit);
+        SaveSystem.SaveData();
 
         //Fade and return to main menu
         UITransition.ToggleTransition(true, () => SceneManager.LoadScene(0));
