@@ -1,17 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class LeaderboardsUI : MonoBehaviour
 {
     [SerializeField] private GameObject noRunsObject;
     [SerializeField] private LeaderboardRunDisplay[] runDisplayObjects = new LeaderboardRunDisplay[0];
-    [SerializeField] private GameObject pageNavigationObject;
 
     private List<SaveUnit> saveUnits;
 
+    [Header("Navigation")]
+    [SerializeField] private GameObject pageNavigationObject;
+    [SerializeField] private Button previousPageButton;
+    [SerializeField] private Button nextPageButton;
+    [SerializeField] private TextMeshProUGUI pageIndexText;
     private int currentPage;
+    private void SetPage(int page)
+    {
+        int pageBound = GetMaxPageIndex() + 1;
+        currentPage = (pageBound + page) % pageBound;
+
+        RefreshLeaderboards();
+    }
+    private int GetMaxPageIndex() => GetPageIndexFromUnitIndex(saveUnits.Count - 1);
     private int GetPageIndexFromUnitIndex(int unitIndex) => unitIndex / runDisplayObjects.Length;
+    private void NextPage() => SetPage(currentPage + 1);
+    private void PreviousPage() => SetPage(currentPage - 1);
+
+    private void Awake()
+    {
+        previousPageButton.onClick.AddListener(PreviousPage);
+        nextPageButton.onClick.AddListener(NextPage);
+    }
 
     private void OnEnable()
     {
@@ -28,12 +50,11 @@ public class LeaderboardsUI : MonoBehaviour
 
         //Bounds page to bounds of a list
         int lastAddedIndex = SaveSystem.SaveFile.GetLastAddedSaveUnitIndex();
-        currentPage = Mathf.Clamp(GetPageIndexFromUnitIndex(lastAddedIndex), 0, GetPageIndexFromUnitIndex(saveUnits.Count - 1));
+        int pageIndex = lastAddedIndex < 0 ? currentPage : GetPageIndexFromUnitIndex(lastAddedIndex);
+        currentPage = Mathf.Clamp(pageIndex, 0, GetMaxPageIndex());
 
         //Show or hide noRunsObject
         noRunsObject.SetActive(saveUnits.Count == 0);
-
-        pageNavigationObject.SetActive(saveUnits.Count > runDisplayObjects.Length);
 
         //Shows and hides displays
         int turnedDisplays = Mathf.Min(saveUnits.Count - currentPage * runDisplayObjects.Length, runDisplayObjects.Length);
@@ -52,5 +73,20 @@ public class LeaderboardsUI : MonoBehaviour
             int saveUnitIndex = currentPage * runDisplayObjects.Length + i;
             display.SetRunDisplay(saveUnits[saveUnitIndex], saveUnitIndex, saveUnitIndex == lastAddedIndex);
         }
+
+        RefreshPageNavigation();
+    }
+
+    private void RefreshPageNavigation()
+    {
+        pageNavigationObject.SetActive(saveUnits.Count > runDisplayObjects.Length);
+
+        int maxPageIndex = GetMaxPageIndex();
+
+        //Set buttons interactability
+        previousPageButton.interactable = currentPage > 0;
+        nextPageButton.interactable = currentPage < maxPageIndex;
+
+        pageIndexText.SetText($"{currentPage + 1}/{maxPageIndex + 1}");
     }
 }

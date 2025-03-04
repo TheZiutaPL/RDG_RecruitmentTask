@@ -35,7 +35,12 @@ public static class SaveSystem
     public class SaveWrapper
     {
         [NonSerialized] private int lastAddedSaveUnitIndex = -1;
-        public int GetLastAddedSaveUnitIndex() => lastAddedSaveUnitIndex;
+        public int GetLastAddedSaveUnitIndex()
+        {
+            int value = lastAddedSaveUnitIndex;
+            lastAddedSaveUnitIndex = -1;
+            return value;
+        }
 
         [SerializeField] private List<SaveUnit> saveUnits = new List<SaveUnit>();
         public List<SaveUnit> GetSaveUnits() => new List<SaveUnit>(saveUnits);
