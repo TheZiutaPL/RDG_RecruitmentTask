@@ -12,8 +12,9 @@ public struct SaveUnit : IComparer<SaveUnit>
     public float time;
     public int coins;
     public int deaths;
+    public int seed;
 
-    public SaveUnit(float time, int coins, int deaths)
+    public SaveUnit(float time, int coins, int deaths, int seed)
     {
         string playerName = PlayerSaveName.PlayerName;
 
@@ -21,6 +22,7 @@ public struct SaveUnit : IComparer<SaveUnit>
         this.time = time;
         this.coins = coins;
         this.deaths = deaths;
+        this.seed = seed;
     }
 
     public int Compare(SaveUnit x, SaveUnit y)

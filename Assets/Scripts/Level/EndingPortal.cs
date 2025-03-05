@@ -36,7 +36,7 @@ public class EndingPortal : MonoBehaviour
         GameManager.Instance.EndGame();
 
         //Saves scores
-        SaveUnit newSaveUnit = new SaveUnit(PlayerStats.Instance.TimePassed, PlayerStats.Instance.Coins, PlayerStats.Instance.Deaths);
+        SaveUnit newSaveUnit = new SaveUnit(PlayerStats.Instance.TimePassed, PlayerStats.Instance.Coins, PlayerStats.Instance.Deaths, LevelGenerator.LastGeneratedSeed);
         SaveSystem.SaveFile.AddSaveUnit(newSaveUnit);
         SaveSystem.SaveData();
 

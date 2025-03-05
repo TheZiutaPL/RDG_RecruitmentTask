@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Threading.Tasks;
 
 [RequireComponent(typeof(Entity))]
 public class EntityDestroyOnDeath : MonoBehaviour
@@ -10,12 +9,14 @@ public class EntityDestroyOnDeath : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Entity>().OnDeath += () => HandleDestroy();
+        GetComponent<Entity>().OnDeath += () => StartCoroutine(HandleDestroy());
     }
 
-    private async void HandleDestroy()
+    private IEnumerator HandleDestroy()
     {
-        await Task.Delay((int)(destroyAfterSeconds * 1000));
-        Destroy(gameObject);
+        yield return new WaitForSeconds(destroyAfterSeconds);
+
+        if(this != null)
+            Destroy(gameObject);
     }
 }

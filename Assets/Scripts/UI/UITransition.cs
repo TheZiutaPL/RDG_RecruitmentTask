@@ -8,7 +8,8 @@ public class UITransition : MonoBehaviour
 {
     private static UITransition Instance;
     private CanvasGroup canvasGroup;
-    
+
+    [SerializeField] private int waitingFrames = 3;
     [SerializeField] private float transitionTime;
     private Coroutine transition;
 
@@ -37,6 +38,12 @@ public class UITransition : MonoBehaviour
 
     IEnumerator Transition(bool toggle, Action callback)
     {
+        canvasGroup.alpha = toggle ? 0f : 1f;
+
+        WaitForEndOfFrame wait = new WaitForEndOfFrame();
+        for (int i = 0; i < waitingFrames; i++)
+            yield return wait;
+
         float timer = 0;
         while (timer <= transitionTime)
         {

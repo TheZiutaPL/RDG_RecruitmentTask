@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
 [RequireComponent(typeof(FollowAI))]
@@ -20,26 +19,24 @@ public class AIAttackByAnimation : MonoBehaviour
         ai.OnChaseTargetReached += HandleAttack;
     }
 
-    private async void HandleAttack()
+    private void HandleAttack()
     {
         if (!canAttack || ai.IsBehaviorOverriden())
             return;
 
-        canAttack = false;
-        
-        await AttackTask();
-
-        canAttack = true;
+        StartCoroutine(Attack());
     }
 
-    private async Task AttackTask()
+    private IEnumerator Attack()
     {
+        canAttack = false;
         ai.SetOverrideBehavior(true);
 
         //Sets animation
         animator.SetTrigger(ATTACK_ANIMATION_KEY);
-        await Task.Delay((int)(attackBehaviorOverrideTime * 1000));
+        yield return new WaitForSeconds(attackBehaviorOverrideTime);
 
         ai.SetOverrideBehavior(false);
+        canAttack = true;
     }
 }

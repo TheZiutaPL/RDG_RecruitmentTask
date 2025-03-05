@@ -47,6 +47,7 @@ public class LevelGenerator : MonoBehaviour
     [Header("Randomness")]
     [SerializeField] private bool randomizeSeed;
     [SerializeField] private int seed;
+    public static int LastGeneratedSeed { get; private set; }
 
     [Header("Island Generation")]
     [SerializeField] private float islandNoiseScale = 6;
@@ -121,6 +122,7 @@ public class LevelGenerator : MonoBehaviour
 
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
+        LastGeneratedSeed = seed;
         
         GenerateMap();
 
