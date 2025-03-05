@@ -88,6 +88,12 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private int treasureValue = 35;
     [SerializeField] private LayerMask treasureCollisionMask;
 
+    [Header("Enemies Spawning")]
+    [SerializeField] private Transform enemiesParent;
+    [SerializeField] private GameObject[] enemyPrefabs = new GameObject[0];
+    [SerializeField] private int enemyCount;
+    [SerializeField] private LayerMask enemyCollisionMask;
+
     private void Start()
     {        
         GenerateLevel();
@@ -111,6 +117,7 @@ public class LevelGenerator : MonoBehaviour
         ClearTransformChildren(coinsParent);
         ClearTransformChildren(treasuresParent);
         ClearTransformChildren(treasureCoinsParent);
+        ClearTransformChildren(enemiesParent);
 
         //Creates randomizer with a specified seed
         randomizer = new System.Random(seed);
@@ -119,7 +126,9 @@ public class LevelGenerator : MonoBehaviour
 
         GenerateClutterAndObstacles();
 
-        GenerateCoinsAndTreasures();
+        SpawnCoinsAndTreasures();
+
+        SpawnEnemies();
 
         navigationSurface.BuildNavMesh();
     }
@@ -192,9 +201,9 @@ public class LevelGenerator : MonoBehaviour
     }
 
     /// <summary>
-    /// Generates coins and treasures on a map
+    /// Spawns coins and treasures on a map
     /// </summary>
-    private void GenerateCoinsAndTreasures()
+    private void SpawnCoinsAndTreasures()
     {
         //Spawns coins
         if (coinPrefabs.Length > 0)
@@ -207,7 +216,7 @@ public class LevelGenerator : MonoBehaviour
                 return Mathf.FloorToInt(rawIndex % coinPrefabs.Length);
             }
 
-            //Spawning objects (not all objects are guaranteed to spawn)
+            //Spawning coins
             for (int i = 0; i < spawnedCoins; i++)
                 TrySpawningObjectOnMap(coinPrefabs[GetCoinIndex()], coinsParent, spawnCollisionRadius, coinCollisionMask);
         }
@@ -227,6 +236,22 @@ public class LevelGenerator : MonoBehaviour
 
         //Sets treasure transforms as player goals
         GameManager.Instance.SetPlayerGoals(treasureTransforms);
+    }
+
+    /// <summary>
+    /// Spawns enemies on a map
+    /// </summary>
+    private void SpawnEnemies()
+    {
+        if (enemyPrefabs.Length == 0)
+            return;
+
+        //Spawning enemies
+        for (int i = 0; i < enemyCount; i++)
+        {
+            int randomIndex = randomizer.Next(0, enemyPrefabs.Length);
+            TrySpawningObjectOnMap(enemyPrefabs[randomIndex], enemiesParent, spawnCollisionRadius, enemyCollisionMask);
+        }
     }
 
     private void ClearTransformChildren(Transform parent)

@@ -705,6 +705,14 @@ MonoBehaviour:
   treasureCollisionMask:
     serializedVersion: 2
     m_Bits: 129
+  enemiesParent: {fileID: 6145107762099846313}
+  enemyPrefabs:
+  - {fileID: 2598853779960552818, guid: 218aa15b78e6ea44f8b3bfbb7f5034a1, type: 3}
+  - {fileID: 8360203239958595675, guid: b56d3ea72730dfb40bf3bd71a976df85, type: 3}
+  enemyCount: 25
+  enemyCollisionMask:
+    serializedVersion: 2
+    m_Bits: 257
 --- !u!1 &8824156289744801674
 GameObject:
   m_ObjectHideFlags: 0
