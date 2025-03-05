@@ -709,7 +709,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 2598853779960552818, guid: 218aa15b78e6ea44f8b3bfbb7f5034a1, type: 3}
   - {fileID: 8360203239958595675, guid: b56d3ea72730dfb40bf3bd71a976df85, type: 3}
-  enemyCount: 25
+  enemyCount: 15
   enemyCollisionMask:
     serializedVersion: 2
     m_Bits: 257

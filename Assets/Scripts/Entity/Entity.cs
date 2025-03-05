@@ -6,7 +6,9 @@ using System;
 public class Entity : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
+    public int GetMaxHealth() => maxHealth;
     private int health;
+    public int GetHealth() => health;
     public bool IsDead { get; protected set; }
 
     public Action<int> OnChangeHealth;
