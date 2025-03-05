@@ -35,12 +35,7 @@ public class LeaderboardsUI : MonoBehaviour
         nextPageButton.onClick.AddListener(NextPage);
     }
 
-    private void OnEnable()
-    {
-        RefreshLeaderboards();
-    }
-
-    private void RefreshLeaderboards()
+    public void RefreshLeaderboards()
     {
         if (runDisplayObjects.Length == 0)
             return;

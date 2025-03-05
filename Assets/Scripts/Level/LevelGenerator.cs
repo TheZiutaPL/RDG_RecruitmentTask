@@ -5,11 +5,13 @@ using System;
 using Random = UnityEngine.Random;
 using UnityEngine.Tilemaps;
 using Object = UnityEngine.Object;
+using NavMeshPlus.Components;
 
 public class LevelGenerator : MonoBehaviour
 {
     private const int NOISE_ORIGIN_MAX = short.MaxValue * 4;
 
+    [SerializeField] private NavMeshSurface navigationSurface;
     [SerializeField] private Vector2Int mapSize;
     private static Vector2Int halfSizeOffset;
 
@@ -118,6 +120,8 @@ public class LevelGenerator : MonoBehaviour
         GenerateClutterAndObstacles();
 
         GenerateCoinsAndTreasures();
+
+        navigationSurface.BuildNavMesh();
     }
 
     /// <summary>
@@ -150,11 +154,11 @@ public class LevelGenerator : MonoBehaviour
                     continue;
 
                 //Sets sand tile
-                groundTilemap.SetTile(new Vector3Int(tilePosition.x, tilePosition.y, -1), sandTile);
+                groundTilemap.SetTile(tilePosition, sandTile);
 
                 //Sets grass tile
                 if (tileNoise - groundStep >= grassAdditionalStep)
-                    groundTilemap.SetTile(tilePosition, grassTile);
+                    groundTilemap.SetTile(new Vector3Int(tilePosition.x, tilePosition.y, 1), grassTile);
             }
         }
     }

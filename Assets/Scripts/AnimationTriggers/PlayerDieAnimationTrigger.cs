@@ -7,6 +7,6 @@ public class PlayerDieAnimationTrigger : MonoBehaviour
 {
     public void PlayerDie()
     {
-        PlayerEntity.Instance.Die();
+        PlayerEntity.Instance.EndDeathState();
     }
 }

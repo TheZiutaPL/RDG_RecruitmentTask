@@ -60,6 +60,9 @@ public class UIManager : MonoBehaviour
             newScreen.gameObject.SetActive(true);
             newScreen.TurnUIScreenGroup(false);
 
+            //Invokes event at the start of changing screen
+            newScreen.InvokeEventOnChangingToScreen();
+
             //Pause work only with main instances
             if (isMainInstance) 
             { 

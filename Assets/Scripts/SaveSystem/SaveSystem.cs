@@ -92,17 +92,24 @@ public static class SaveSystem
     {
         string path = GetFilePath();
 
+        SaveWrapper loadedSave;
+
         //If there is no save file
         if (!File.Exists(path))
-            return new SaveWrapper();
+            loadedSave = new SaveWrapper();
+        else
+        {
+            //Creates a BinaryFormatter instance and opens a FileStream
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream fileStream = new FileStream(path, FileMode.Open);
 
-        //Creates a BinaryFormatter instance and opens a FileStream
-        BinaryFormatter binaryFormatter = new BinaryFormatter();        
-        FileStream fileStream = new FileStream(path, FileMode.Open);
+            //Reads save file
+            loadedSave = (SaveWrapper)binaryFormatter.Deserialize(fileStream);
+            fileStream.Close();
+        }
 
-        //Reads save file
-        SaveWrapper loadedSave = (SaveWrapper)binaryFormatter.Deserialize(fileStream);
-        fileStream.Close();
+        //I'm not sure why, but it sometimes returns 0 as its last index despite of its default value of -1, this line fixes the issue
+        loadedSave.GetLastAddedSaveUnitIndex();
 
         return loadedSave;
     }

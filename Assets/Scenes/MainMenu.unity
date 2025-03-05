@@ -3077,6 +3077,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseOnScreen: 0
+  onStartChangingToScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &539740845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3912,6 +3915,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseOnScreen: 0
+  onStartChangingToScreen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1986540650}
+        m_TargetAssemblyTypeName: LeaderboardsUI, Assembly-CSharp
+        m_MethodName: RefreshLeaderboards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1293734872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6222,6 +6240,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4514695683143452932, guid: ee4e7d602301d24458055ffb930ed418, type: 3}
   m_PrefabInstance: {fileID: 1271547623782466478}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1986540650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2623581392266642577, guid: ee4e7d602301d24458055ffb930ed418, type: 3}
+  m_PrefabInstance: {fileID: 1271547623782466478}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8827894d53dff9458bac15337a9ebc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006319902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,6 +6528,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseOnScreen: 0
+  onStartChangingToScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1271547623782466478
 PrefabInstance:
   m_ObjectHideFlags: 0

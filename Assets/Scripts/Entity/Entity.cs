@@ -7,9 +7,12 @@ public class Entity : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     private int health;
+    public bool IsDead { get; protected set; }
 
     public Action<int> OnChangeHealth;
+    public Action OnDamage;
     public Action OnDeath;
+    public Action OnEndDeathState;
 
     private void Start()
     {
@@ -19,6 +22,7 @@ public class Entity : MonoBehaviour
     public void SetHealthToMax()
     {
         health = maxHealth;
+        OnChangeHealth?.Invoke(health);
     }
 
     public void Damage()
@@ -26,12 +30,22 @@ public class Entity : MonoBehaviour
         health--;
         OnChangeHealth?.Invoke(health);
 
-        if (health <= 0)
-            Die();
+        if (IsDead)
+            return;
+
+        IsDead = health <= 0;
+        if (IsDead)
+            OnDeath?.Invoke();
+        else
+            OnDamage?.Invoke();
     }
 
-    public void Die()
+
+    /// <summary>
+    /// It is used through scripts and animations, cleanup after animated death
+    /// </summary>
+    public void EndDeathState()
     {
-        OnDeath?.Invoke();
+        OnEndDeathState?.Invoke();
     }
 }

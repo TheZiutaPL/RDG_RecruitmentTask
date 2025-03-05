@@ -7,6 +7,6 @@ public class EntityDestroyOnDeath : MonoBehaviour
 {
     private void Start()
     {
-        GetComponent<Entity>().OnDeath += () => Destroy(gameObject);
+        GetComponent<Entity>().OnEndDeathState += () => Destroy(gameObject);
     }
 }

@@ -16,12 +16,13 @@ public class PlayerEntity : Entity
         else
             Destroy(this);
 
-        OnDeath += Respawn;
+        OnEndDeathState += Respawn;
     }
 
     private void Respawn()
     {
         SetHealthToMax();
+        IsDead = false;
 
         transform.position = Vector2.zero;
 
