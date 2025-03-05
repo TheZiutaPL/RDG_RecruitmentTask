@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideSpawnDistance: 0.5
-  guideCooldown: 2.5
+  guideCooldown: 1
   guideSpellPrefab: {fileID: 3645903299651943576, guid: 557fd86254571de438fe5ddcf0314ccb, type: 3}
   guideSpeed: 8
   guideLifetime: 3.5
