@@ -1,19 +1,19 @@
 # Welcome To My Project 💻
-This project was created as a recruitment task. It is a speedrunning-oriented, treasure-hunting game with procedurally generated maps.
+This project was created as a 2 week recruitment task. It is a speedrunning-oriented, treasure-hunting game with procedurally generated maps.
 
 ## How To Play 🎮
 Your goal is to collect the required number of coins in the shortest possible time. The map you’re on is always different and packed with coins, treasures, and threats. After gathering enough coins, a portal opens at the center of the map. Hop in and beat your previous records!
 
 ## Controls 🕹
-[WASD] - Movement
+```WASD``` - Movement
 <br>
-[F] - Attack
+```F``` - Attack
 <br>
-[E] - Interact
+```E``` - Interact
 <br>
-[Space] - Guide Spell (Points you to the nearest treasure or the portal if you already have enough coins)
+```Space``` - Guide Spell (Points you to the nearest treasure or the portal if you already have enough coins)
 <br>
-[Escape] - Pause Menu
+```Escape``` - Pause Menu
 
 ## Game Features 🔥
 - Seed-Based Procedural Map Generation
@@ -38,8 +38,15 @@ Your goal is to collect the required number of coins in the shortest possible ti
   - Fox (Ground enemy)
   - Bat (Flying enemy)
 - Interaction System
+  - Player can interact with Interactable objects
+  - Supports animations
 
 ## Code Features 🛠
 - Modular AI behavior
+  - Roaming and Chase states
+  - Easy behavior overriding
 - Event-based approach
-- Easily expandable
+  - Simple way to add more functionality by subscribing to various events
+- Easily expandable systems
+  - Application of SOLID principles
+- Usage of DoTween external library
