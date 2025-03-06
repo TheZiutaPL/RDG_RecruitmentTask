@@ -21,4 +21,10 @@ public class HealthHeart : MonoBehaviour
 
         heartFillObject.SetActive(on);
     }
+
+    private void OnDestroy()
+    {
+        //Kills all tweens if an object is destroyed first
+        transform.DOKill();
+    }
 }
