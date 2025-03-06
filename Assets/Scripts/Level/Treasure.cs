@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Treasure : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Treasure : MonoBehaviour
     [SerializeField] private float coinSpreadRange;
     [SerializeField] private int diggedCoinsMin, diggedCoinsMax;
     private List<GameObject> buriedCoins = new List<GameObject>();
+
+    [Header("Coin Animation")]
+    [SerializeField] private float coinAnimationAppearTime = .15f;
 
     public void SetTreasureContent(int overallValue, Transform coinsParent = null)
     {
@@ -59,9 +63,14 @@ public class Treasure : MonoBehaviour
         int iterations = Mathf.Min(diggedCoins, buriedCoins.Count) - 1;
         for (int i = iterations; i >= 0; i--)
         {
-            SpreadCoinAtRandom(buriedCoins[i].transform);
-            buriedCoins[i].SetActive(true);
+            GameObject buriedCoin = buriedCoins[i];
+
+            SpreadCoinAtRandom(buriedCoin.transform);
+            buriedCoin.SetActive(true);
             buriedCoins.RemoveAt(i);
+
+            buriedCoin.transform.localScale = Vector3.zero;
+            buriedCoin.transform.DOScale(1, coinAnimationAppearTime).SetEase(Ease.OutBounce);
         }
 
         if (buriedCoins.Count == 0)

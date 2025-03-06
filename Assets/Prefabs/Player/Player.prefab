@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 3322258555210963047}
   - component: {fileID: 7126426572399890307}
   - component: {fileID: 5795138478633374068}
+  - component: {fileID: 8508847810836643979}
   - component: {fileID: 7926027194775889483}
   - component: {fileID: 6078470622461543854}
   m_Layer: 8
@@ -222,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  playerRespawnSound: {fileID: 8300000, guid: 4fa18ecaf91916d49a146dcca300aecc, type: 3}
 --- !u!114 &2806565174660328564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,8 +258,6 @@ MonoBehaviour:
   guideSpawnDistance: 0.5
   guideCooldown: 1
   guideSpellPrefab: {fileID: 3645903299651943576, guid: 557fd86254571de438fe5ddcf0314ccb, type: 3}
-  guideSpeed: 8
-  guideLifetime: 3.5
 --- !u!114 &3322258555210963047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +303,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1898467544197119184}
+--- !u!114 &8508847810836643979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963407393488907980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3320edd94899df546832b564c912e2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: cafc4979f29d9424b8120fce924ae62c, type: 3}
 --- !u!50 &7926027194775889483
 Rigidbody2D:
   serializedVersion: 4
@@ -686,6 +699,8 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 807615c9d46023f488f012d5315e8795, type: 3}
   - {fileID: 8300000, guid: 4939e85a7d718c0408e3c130092d11de, type: 3}
+  - {fileID: 8300000, guid: cafc4979f29d9424b8120fce924ae62c, type: 3}
+  - {fileID: 8300000, guid: de9bcf64891cd5c47bf150769cba029b, type: 3}
 --- !u!114 &7559781652896715036
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,10 +11,8 @@ public class PlayerGuide : MonoBehaviour
     private bool IsOnCooldown() => cooldown > 0;
     private void SetCooldown() => cooldown = guideCooldown;
 
-    [Header("Guide Spell Settings")]
-    [SerializeField] private Projectile guideSpellPrefab;
-    [SerializeField] private float guideSpeed = 3;
-    [SerializeField] private float guideLifetime = 3.5f;
+    [Header("Guide Spell")]
+    [SerializeField] private GuideSpell guideSpellPrefab;
 
     private void Update()
     {
@@ -28,13 +26,13 @@ public class PlayerGuide : MonoBehaviour
             return;
 
         //Gets goal direction
-        Vector3 direction = (GameManager.Instance.GetClosestPlayerGoalPosition(transform.position) - transform.position).normalized;
+        Vector3 targetPosition = GameManager.Instance.GetClosestPlayerGoalPosition(transform.position);
 
         //Spawns projectile at player position
-        Projectile projectile = Instantiate(guideSpellPrefab, transform.position + guideSpawnDistance * direction, Quaternion.identity);
+        GuideSpell projectile = Instantiate(guideSpellPrefab, transform.position + guideSpawnDistance * (targetPosition - transform.position).normalized, Quaternion.identity);
 
         //Sets projectile values and cooldown
-        projectile.SetProjectile(direction, guideSpeed, guideLifetime);
+        projectile.SetGuideSpell(targetPosition);
         SetCooldown();
     }
 

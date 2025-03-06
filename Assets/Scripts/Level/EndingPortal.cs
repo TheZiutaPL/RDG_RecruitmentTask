@@ -8,15 +8,24 @@ public class EndingPortal : MonoBehaviour
     private const string PORTAL_TOGGLE_BOOL = "isOn";
     [SerializeField] private Animator animator;
     [SerializeField] private Interactable portalInteractable;
+    [SerializeField] private AudioClip portalOpenSound;
+    private bool isOpen = false;
 
     private void Start()
     {
         GameManager.Instance.OnRequiredCoinsGathered += () =>
         {
+            if (isOpen)
+                return;
+
+            isOpen = true;
+
             //Sets portal as a player goal
             List<Transform> portalGoal = new List<Transform>();
             portalGoal.Add(transform);
             GameManager.Instance.SetPlayerGoals(portalGoal);
+
+            AudioManager.Instance.PlaySFX(portalOpenSound);
 
             TogglePortal(true);
         };

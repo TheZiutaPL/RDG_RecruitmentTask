@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869bebb0fac5bf748b7476f8cce3a959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteractable: 1
   interactableName: Treasure
   interactionTextSufix: dig up
   onInteraction:
@@ -85,6 +86,7 @@ MonoBehaviour:
   coinSpreadRange: 2.5
   diggedCoinsMin: 2
   diggedCoinsMax: 5
+  coinAnimationAppearTime: 0.25
 --- !u!58 &-838838360032601882
 CircleCollider2D:
   m_ObjectHideFlags: 0

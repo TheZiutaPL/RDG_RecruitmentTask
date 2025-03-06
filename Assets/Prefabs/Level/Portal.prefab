@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8816866413032765033}
   portalInteractable: {fileID: 3361968395386521445}
+  portalOpenSound: {fileID: 8300000, guid: 500adc28ff30ccf41ae4ac2387fb7580, type: 3}
 --- !u!114 &3361968395386521445
 MonoBehaviour:
   m_ObjectHideFlags: 0

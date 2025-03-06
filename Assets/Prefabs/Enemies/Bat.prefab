@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2223314057229935495}
   - component: {fileID: 3950423637661431717}
   - component: {fileID: 615838863787654681}
+  - component: {fileID: 1094620444428837264}
   m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
@@ -158,6 +159,22 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &1094620444428837264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196250549302471315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2b11b6928b1884da0f81f3895e43a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 384e059bc264cbc45b8dfbc23cc08bcf, type: 3}
+  - {fileID: 8300000, guid: cafc4979f29d9424b8120fce924ae62c, type: 3}
+  - {fileID: 8300000, guid: de9bcf64891cd5c47bf150769cba029b, type: 3}
 --- !u!1 &2598853779960552818
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,9 +189,10 @@ GameObject:
   - component: {fileID: 5428224519142424440}
   - component: {fileID: 9125574481998766840}
   - component: {fileID: 3792707146759680742}
+  - component: {fileID: 4757717100340925960}
+  - component: {fileID: 6296408507908115026}
   - component: {fileID: 5434200552920780545}
   - component: {fileID: 9194908725027016689}
-  - component: {fileID: 4757717100340925960}
   m_Layer: 8
   m_Name: Bat
   m_TagString: Untagged
@@ -274,6 +292,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a0a5fe76346c8468b92ba47260bc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4757717100340925960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598853779960552818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e66798a8bde60447a96abe70221ad54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAfterSeconds: 3.5
+  tweenTime: 0.5
+--- !u!114 &6296408507908115026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598853779960552818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3320edd94899df546832b564c912e2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: cafc4979f29d9424b8120fce924ae62c, type: 3}
 --- !u!50 &5434200552920780545
 Rigidbody2D:
   serializedVersion: 4
@@ -336,19 +381,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
   m_Radius: 0.35
---- !u!114 &4757717100340925960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2598853779960552818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e66798a8bde60447a96abe70221ad54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyAfterSeconds: 2
 --- !u!1 &5253383278052419221
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Coin : MonoBehaviour
 {
@@ -16,5 +17,11 @@ public class Coin : MonoBehaviour
             //Destroys itself
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        //Kills all tweens if an object is destroyed first
+        transform.DOKill();
     }
 }

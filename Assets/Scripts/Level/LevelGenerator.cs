@@ -86,7 +86,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Transform treasureCoinsParent;
     [SerializeField] private Treasure treasurePrefab;
     [SerializeField] private int treasureCount = 3;
-    [SerializeField] private int treasureValue = 35;
+    [SerializeField] private int treasureMinValue = 25;
+    [SerializeField] private int treasureMaxValue = 40;
     [SerializeField] private LayerMask treasureCollisionMask;
 
     [Header("Enemies Spawning")]
@@ -231,6 +232,7 @@ public class LevelGenerator : MonoBehaviour
 
             if (treasure != null)
             {
+                int treasureValue = randomizer.Next(treasureMinValue, treasureMaxValue);
                 treasure.SetTreasureContent(treasureValue, treasureCoinsParent);
                 treasureTransforms.Add(treasure.transform);
             }

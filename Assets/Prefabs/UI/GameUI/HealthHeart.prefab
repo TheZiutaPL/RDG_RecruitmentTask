@@ -202,6 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartFillObject: {fileID: 2107527072856863457}
+  animationTime: 0.1
+  animationShakeValue: 0.3
 --- !u!1 &7636861737709361486
 GameObject:
   m_ObjectHideFlags: 0
