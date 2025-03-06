@@ -3349,7 +3349,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2326837048920416378, guid: 790b691a51e6f2040a3d14ca3577ab5a, type: 3}
       propertyPath: m_Name
-      value: Button_Play
+      value: Button_Start
       objectReference: {fileID: 0}
     - target: {fileID: 2953877958364565422, guid: 790b691a51e6f2040a3d14ca3577ab5a, type: 3}
       propertyPath: m_Pivot.x
@@ -3461,7 +3461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7653367337208189083, guid: 790b691a51e6f2040a3d14ca3577ab5a, type: 3}
       propertyPath: m_text
-      value: Play
+      value: Start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
